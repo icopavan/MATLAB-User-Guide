@@ -1,166 +1,195 @@
 <style>
-    @font-face {
-        font-family: "Computer Modern";
-        src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunss.otf');
-    }
-    @font-face {
-        font-family: "Computer Modern";
-        font-weight: bold;
-        src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunsx.otf');
-    }
-    @font-face {
-        font-family: "Computer Modern";
-        font-style: oblique;
-        src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunsi.otf');
-    }
-    @font-face {
-        font-family: "Computer Modern";
-        font-weight: bold;
-        font-style: oblique;
-        src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunso.otf');
-    }
-    div.cell{
-        width:800px;
-        margin-left:17% !important;
-        margin-right:auto;
-    }
-    h1 {
-        /* font-family: Computer Modern, serif; */
-        width:775px;
-        color:#333333;
-        font-family: ‘Lucida Console’, Monaco, monospace;
-        text-align: center;
-    }
-    h2 {
-        /* font-family: Computer Modern, serif; */
-        color: #333333;
-        font-family: ‘Lucida Console’, Monaco, monospace;
-        text-align: center;
-    }
-    h3 {
-        width:775px;
-        /* font-family: Computer Modern, serif; */
-        width:775px;
-        color: #333333;
-        font-family: ‘Lucida Console’, Monaco, monospace;
-    }
-    h4{
-        color: #333333;
-        font-family: ‘Lucida Console’, Monaco, monospace;
-        margin-top:15px;
-        margin-bottom: 3px;
-       }
-    div.text_cell_render{
-     /* font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; */
-        color: #333333;
-     /* font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; */
-     /* font-family: ‘Trebuchet MS’, Helvetica, sans-serif; */
-        font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
-        line-height: 145%;
-        font-size: 130%;
-        width: 800px; 
-    }
-    code{
-          font-size: 40%;
-    }
-    ul{
-        margin: 2em;
-    }
-    ul li{
-           padding-left: 0.5em;
-           margin-bottom: 0.5em;
-           margin-top: 0.5em;
-           /*font-variant: small-caps;*/
-    }
-    a.nounderline:link{
-       font-weight: bold;
-       text-decoration:none;
-    }
-    a.nounderlineblack:link{
-       color: #333333;
-       font-weight: bold;
-       text-decoration:none;
-    }
-    a.nounderlineblack:visited{
-       color: #333333;
-       font-weight: bold;
-       text-decoration:none;
-    }
-    a:link{
-       font-weight: bold;
-       text-decoration:none;
-    }
-    a:visited{
-       font-weight: bold;
-       text-decoration: none;
-    }
-    a:hover{
-       text-decoration: none;
-       font-weight: bold;
-    }
-    a:focus{
-       text-decoration: none;
-       font-weight: bold;
-    }
-    a:active{
-       text-decoration: none;
-       font-weight: bold;
-    }
-    .CodeMirror{ 
-            font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
-    }
-    .prompt{
-        display: None;
-    }
-    .text_cell_render h5 {
-        font-weight: 300;
-        font-size: 22pt;
-        color: #4057A1;
-        font-style: italic;
-        margin-bottom: .5em;
-        margin-top: 0.5em;
-        display: block;
-    }
-    .warning{
-        color: rgb( 240, 20, 20 )
-        }
-    div.input
-    {
+@font-face {
+  font-family: "Computer Modern";
+  src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunss.otf');
+}
+@font-face {
+  font-family: "Computer Modern";
+  font-weight: bold;
+  src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunsx.otf');
+}
+@font-face {
+  font-family: "Computer Modern";
+  font-style: oblique;
+  src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunsi.otf');
+}
+@font-face {
+  font-family: "Computer Modern";
+  font-weight: bold;
+  font-style: oblique;
+  src: url('http://9dbb143991406a7c655e-aa5fcb0a5a4ec34cff238a2d56ca4144.r56.cf5.rackcdn.com/cmunso.otf');
+}
+div.cell{
+  width:800px;
+  margin-left:17% !important;
+  margin-right:auto;
+}
+h1 {
+  /* font-family: Computer Modern, serif; */
+  width:775px;
+  color:#333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  text-align: center;
+}
+h2 {
+  /* font-family: Computer Modern, serif; */
+  color: #333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  text-align: center;
+}
+h3 {
+  width:775px;
+  /* font-family: Computer Modern, serif; */
+  width:775px;
+  color: #333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+}
+h4{
+  color: #333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  margin-top:15px;
+  margin-bottom: 3px;
+}
 
-    }
+div.text_cell_render{
+ /* font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; */
+ color: #333333;
+ /* font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; */
+ /* font-family: ‘Trebuchet MS’, Helvetica, sans-serif; */
+ font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+ line-height: 145%;
+ font-size: 130%;
+ width: 800px; 
+}
+code{
+  font-size: 40%;
+}
+ul{
+  margin: 2em;
+}
+ul li{
+ padding-left: 0.5em;
+ margin-bottom: 0.5em;
+ margin-top: 0.5em;
+ /*font-variant: small-caps;*/
+}
+a.nounderline:link{
+ color: #1d3b84;
+ font-weight: bold;
+ text-decoration:none;
+}
+a.nounderlineblack:link{
+ color: #333333;
+ font-weight: bold;
+ text-decoration:none;
+}
+a.nounderlineblack:visited{
+ color: #333333;
+ font-weight: bold;
+ text-decoration:none;
+}
+a:link{
+  color: #1d3b84;
+
+co font-weight: bold;
+ text-decoration:none;
+}
+a:visited{
+ font-weight: bold;
+ text-decoration: none;
+}
+a:hover{
+ text-decoration: none;
+ font-weight: bold;
+}
+a:focus{
+ text-decoration: none;
+ font-weight: bold;
+}
+a:active{
+ text-decoration: none;
+ font-weight: bold;
+}
+.CodeMirror{ 
+  font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
+}
+.prompt{
+  display: None;
+}
+h5 {
+  font-family: 'Open sans',verdana,arial,sans-serif;
+}
+.text_cell_render h5 {
+  font-weight: 300;
+  font-style: normal;
+  color: #1d3b84;
+  font-size: 22pt;
+  margin-bottom: 0em;
+  margin-top: 1.5em;
+  display: block;
+  white-space: nowrap;
+}
+.text_cell_render h6 {
+  font-weight: 300;
+  font-size: 22pt;
+  color: #1d3b84;
+  margin-bottom: .5em;
+  margin-top: 0.5em;
+  display: block;
+}
+
+
+
+.warning{
+  color: rgb( 240, 20, 20 )
+}
+blockquote{
+  display:block;
+  background: #FFFFFF;
+  border-left: 2px dashed #1d3b84;
+  border-right: 2px dashed #1d3b84;
+  font-family: 'Open sans',verdana,arial,sans-serif;
+  padding: 25px 25px 25px 25px;
+  text-align:justify;
+  text-justify:inter-word;
+  width:auto;
+  display:table
+}
+
+blockquote p {
+  margin-bottom: 0;
+  line-height: 125%;
+  font-size: 100%;
+}
+
+.image-line {
+   margin-left: 170px;
+}
+.image-cell {
+   width: 100px;
+   margin: 10px;
+   float: left;
+}
+.image-clear {
+   clear: both;
+}
+
 
 </style>
-<script>
-    MathJax.Hub.Config({
-                        TeX: {
-                           extensions: ["AMSmath.js"]
-                           },
-                tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-                },
-                displayAlign: 'center', // Change this to 'center' to center equations.
-                "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
-                }
-        });
 
-    on = "View input";
-    off = "Hide input"
-    
-    function onoff()
-    {
-      currentvalue = document.getElementById('test').value;
-      if(currentvalue == off)
-      {
-        document.getElementById('test').value=on;
-          $('div.input').hide();
-      }
-      else
-      {
-        document.getElementById('test').value=off;
-          $('div.input').show();
-      }
+<script>
+MathJax.Hub.Config({
+  TeX: {
+   extensions: ["AMSmath.js"]
+   },
+   tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+    },
+    displayAlign: 'center', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+      styles: {'.MathJax_Display': {"margin": 4}}
     }
+    });
 
 </script>
