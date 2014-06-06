@@ -1,3 +1,5 @@
+
+<style>
 @charset "utf-8";
 /* CSS Document */
 
@@ -443,5 +445,7 @@ input::-webkit-input-placeholder {
 .content .footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px solid #d6d4d4; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
 .content .footer p { margin:0px; }
 
+
+</style>
 
 
