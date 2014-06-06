@@ -25,6 +25,13 @@ div.cell{
   margin-right:auto;
 }
 
+#top{
+  position: relative;
+  height: 85px;
+  background-image: url('Images/banner.png');
+  background-repeat: no-repeat;
+}
+
 div.text_cell_render{
  /* font-family: Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; */
  color: #333333;
@@ -120,6 +127,10 @@ h5 {
 .text_cell_render ol li ol li { list-style-type:lower-alpha; }
 .text_cell_render ol li ul { padding-top:7px; }
 .text_cell_render ol li ul li { list-style:square; }
+
+.text_cell_render  .eqn_num{
+  float: right;
+}
 
 .text_cell_render h4{
   color: #333333;
