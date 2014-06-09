@@ -27,9 +27,10 @@ div.cell{
 h1 {
   /* font-family: Computer Modern, serif; */
   width:775px;
-  color:#333333;
+  color:#1d3b84;
   font-family: ‘Lucida Console’, Monaco, monospace;
   text-align: center;
+  font-size: 50; 
 }
 h2 {
   /* font-family: Computer Modern, serif; */
@@ -38,13 +39,21 @@ h2 {
   text-align: center;
 }
 h3 {
-  width:775px;
   /* font-family: Computer Modern, serif; */
   width:775px;
   color: #333333;
   font-family: ‘Lucida Console’, Monaco, monospace;
 }
 h4{
+  color: #333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+}
+
+h5 {
+  font-family: 'Open sans',verdana,arial,sans-serif;
+}
+
+h6{
   color: #333333;
   font-family: ‘Lucida Console’, Monaco, monospace;
   margin-top:15px;
@@ -73,6 +82,7 @@ ul li{
  margin-top: 0.5em;
  /*font-variant: small-caps;*/
 }
+
 a.nounderline:link{
  color: #1d3b84;
  font-weight: bold;
@@ -89,7 +99,7 @@ a.nounderlineblack:visited{
  text-decoration:none;
 }
 a:link{
-  color: #1d3b84;
+  color: #447adb;
 
 co font-weight: bold;
  text-decoration:none;
@@ -111,31 +121,84 @@ a:active{
  font-weight: bold;
 }
 .CodeMirror{ 
+  background-color: white; 
+  border-bottom: 10; 
   font-family: "Source Code Pro", source-code-pro,Consolas, monospace;
 }
 .prompt{
   display: None;
 }
-h5 {
-  font-family: 'Open sans',verdana,arial,sans-serif;
+
+.col1 {
+    background-color: white;
+    float: left;
+    width: 260px;
+    height: 220px;
 }
+.col2 {
+    background-color: white;
+    width: 400px;
+    height: 220px;
+    float:center; 
+    display: table-cell; 
+}
+.col3 {
+    background-color: white;
+    float: right;
+    width: 200px;
+    height: 220px; 
+}
+
+   
+
+.text_cell_render h1 {
+  font-size: 35pt;
+  width:775px;
+  color:#333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  text-align: center;
+  font-size: 50; 
+}
+
+.text_cell_render h3 {
+  font-weight: 10;
+  font-style: italic;
+  color:#003366; 
+  font-size: 15pt;
+  margin-bottom: 0em;
+  margin-top: 1.5em;
+  display: inline;
+  white-space: nowrap;
+}
+
+.text_cell_render h4{
+  color: #333333;
+  font-family: ‘Lucida Console’, Monaco, monospace;
+  margin-top:15px;
+  margin-bottom: 3px;
+  font-size: 10pt; 
+}
+
 .text_cell_render h5 {
   font-weight: 300;
   font-style: normal;
-  color: #1d3b84;
-  font-size: 22pt;
+  color:#003366; 
+  font-size: 25pt;
   margin-bottom: 0em;
   margin-top: 1.5em;
-  display: block;
+  display: inline;
   white-space: nowrap;
 }
+
 .text_cell_render h6 {
-  font-weight: 300;
-  font-size: 22pt;
-  color: #1d3b84;
-  margin-bottom: .5em;
-  margin-top: 0.5em;
-  display: block;
+  font-weight: 0;
+  font-style: normal;
+  color:#003366; 
+  font-size: 16pt;
+  margin-bottom: 0em;
+  margin-top: 1.5em;
+  display: inline;
+  white-space: nowrap;
 }
 
 
