@@ -132,13 +132,13 @@ a:active{
 .col1 {
     background-color: white;
     float: left;
-    width: 260px;
-    height: 220px;
+    width: 300px;
+    height: 100px;
 }
 .col2 {
     background-color: white;
     width: 400px;
-    height: 220px;
+    height: 100px;
     float:center; 
     display: table-cell; 
 }
@@ -146,7 +146,7 @@ a:active{
     background-color: white;
     float: right;
     width: 200px;
-    height: 220px; 
+    height: 100px; 
 }
 
    
