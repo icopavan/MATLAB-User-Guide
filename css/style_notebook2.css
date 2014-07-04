@@ -1,14 +1,14 @@
 <style>
     /*body {
-background-color: #F5F5F5;
-}*/
+        background-color: #F5F5F5;
+    }*/
     div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
     }
     h1 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h1 {
         font-weight: 200;
@@ -19,9 +19,9 @@ background-color: #F5F5F5;
         margin-top: 0em;
         display: block;
         white-space: nowrap;
-    }
+    } 
     h2 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
         text-indent:1em;
     }
     .text_cell_render h2 {
@@ -34,9 +34,9 @@ background-color: #F5F5F5;
         margin-top: 0.5em;
         display: block;
         white-space: nowrap;
-    }
+    } 
     h3 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h3 {
         font-weight: 300;
@@ -49,7 +49,7 @@ background-color: #F5F5F5;
         white-space: nowrap;
     }
     h4 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h4 {
         font-weight: 300;
@@ -61,7 +61,7 @@ background-color: #F5F5F5;
         white-space: nowrap;
     }
     h5 {
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
     }
     .text_cell_render h5 {
         font-weight: 300;
@@ -74,7 +74,7 @@ background-color: #F5F5F5;
         white-space: nowrap;
     }
     div.text_cell_render{
-        font-family: 'Open sans',verdana,arial,sans-serif;
+        font-family: "Open sans",verdana,arial,sans-serif;
         line-height: 135%;
         font-size: 125%;
         width:750px;
@@ -96,27 +96,39 @@ background-color: #F5F5F5;
     code{
       font-size: 78%;
     }
+    .rendered_html code{
+    background-color: transparent;
+    }
     ul{
-        /* color:#447adb; */ // colors text too
+        /* color:#447adb; */  // colors text too
         margin: 2em;
     }
     ul li{
-        padding-left: 0.5em;
-        margin-bottom: 0.5em;
-        margin-top: 0.5em;
+        padding-left: 0.5em; 
+        margin-bottom: 0.5em; 
+        margin-top: 0.5em; 
     }
     ul li li{
-        padding-left: 0.2em;
-        margin-bottom: 0.2em;
-        margin-top: 0.2em;
+        padding-left: 0.2em; 
+        margin-bottom: 0.2em; 
+        margin-top: 0.2em; 
+    }
+    ol{
+        /* color:#447adb; */  // colors text too
+        margin: 2em;
+    }
+    ol li{
+        padding-left: 0.5em; 
+        margin-bottom: 0.5em; 
+        margin-top: 0.5em; 
     }
     /*.prompt{
-display: None;
-} */
+        display: None;
+    } */
     ul li{
-        padding-left: 0.5em;
-        margin-bottom: 0.5em;
-        margin-top: 0.2em;
+        padding-left: 0.5em; 
+        margin-bottom: 0.5em; 
+        margin-top: 0.2em; 
     }
     a:link{
        font-weight: bold;
@@ -139,10 +151,10 @@ display: None;
        color:#447adb;
     }
     .rendered_html :link {
-       text-decoration: none;
+       text-decoration: none; 
     }
     .rendered_html :hover {
-       text-decoration: none;
+       text-decoration: none; 
     }
     .rendered_html :visited {
       text-decoration: none;
@@ -155,7 +167,7 @@ display: None;
     }
     .warning{
         color: rgb( 240, 20, 20 )
-    }
+    } 
     hr {
       color: #f3f3f3;
       background-color: #f3f3f3;
@@ -164,7 +176,7 @@ display: None;
     blockquote{
       display:block;
       background: #f3f3f3;
-      font-family: 'Open sans',verdana,arial,sans-serif;
+      font-family: "Open sans",verdana,arial,sans-serif;
       width:610px;
       padding: 15px 15px 15px 15px;
       text-align:justify;
@@ -176,7 +188,7 @@ display: None;
         font-size: 100%;
       }
    /* element.style {
-} */
+    } */  
 </style>
 <script>
     MathJax.Hub.Config({
@@ -184,12 +196,12 @@ display: None;
                            extensions: ["AMSmath.js"]
                            },
                 tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+                    displayMath: [ ["$$","$$"], ["\\[","\\]"] ]
                 },
-                displayAlign: 'center', // Change this to 'center' to center equations.
+                displayAlign: "center", // Change this to "center" to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
+                    styles: {".MathJax_Display": {"margin": 4}}
                 }
         });
 </script>
