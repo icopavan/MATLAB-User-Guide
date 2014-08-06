@@ -46,6 +46,7 @@ def get_NB(file_ipynb):
         return json.load(f)
         
 # Replace 'nbviewer'-domain hrefs to plot.ly
+# TODO! add support for './' relative links!
 def replace_href(NB, domains, translate):
     for i_cell, cell in enumerate(NB['worksheets'][0]['cells']):
         if cell['cell_type']=='markdown':
