@@ -49,11 +49,11 @@ def get_config(chapter):
     if chapter == 'user-guide':
         name = ""
         title = "MATLAB User Guide | plotly"
-        descrip = "A User Guide for Plotly's MATLAB API Library"
+        descrip = "A User Guide for plotly and its MATLAB API Library"
     if chapter == 'introduction':
-        descrip = "An introduction to Plotly's MATLAB API Library"
+        descrip = "An introduction to plotly and its MATLAB API Library"
     if chapter == 'overview':
-        descrip = "An overview of Plotly's MATLAB API Library"
+        descrip = "An overview of plotly and its MATLAB API Library"
 
     # Output
     config = dict(
