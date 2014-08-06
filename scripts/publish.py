@@ -8,12 +8,10 @@ import os
 # Script that 
 # 
 # (1)  parses HTML files leaving only <body></body> template
-# (2a) redirects links to <h1> to #notebook 
-# (2b) strips <h1> tag (i.e. the NB's title)
-# (4)  strips <style></style> inside body
-# (5)  strips <script></script> inside body (which inserts MathJax)
-# (6)  strips last <pre><pre> inside body (which inserts CSS into NB)
-# (--) ... other stuff eventually ...
+# (2)  strips <style></style> inside body
+# (3)  strips <script></script> inside body (which inserts MathJax)
+# (4)  strips last <pre><pre> inside body (which inserts CSS into NB)
+#
 # (*)  adds this template to the published/ tree (using ./inputs/translate.json)
 #
 # -------------------------------------------------------------------------------
@@ -40,31 +38,12 @@ def get_soup(file_html):
 
 ## (1)
 
-# Get HTML <body> and <head>
+# Get HTML <body> 
 def get_body(soup):
     print "[{}]".format(NAME), '... grabs <body>'
     return soup.body
 
 ## (2)
-
-# Replace href to 
-def replace_title_href(body):
-    old = "#"+body.h1['id']
-    new = "#notebook"
-    for a in body.findAll('a'):
-        if a['href']==old:
-            print "[{}]".format(NAME), '... link to title found:', a['href']
-            a['href'] = a['href'].replace(old, new)
-            print "[{}]".format(NAME), '... link updated to:', a['href']
-    return body
-
-# Strip title (i.e. the first h1) tag from body
-def strip_title(body):
-    body.h1.extract()
-    print "[{}]".format(NAME), '... strip <h1> title'
-    return body
-
-## (3)
 
 # Strip style tag from body
 def strip_style(body):
@@ -72,7 +51,7 @@ def strip_style(body):
     print "[{}]".format(NAME), '... strip <style>'
     return body
 
-## (4)
+## (3)
 
 # Strip script tag from body
 def strip_script(body):
@@ -80,18 +59,24 @@ def strip_script(body):
     print "[{}]".format(NAME), '... strip <script> (which inserts MathJax)'
     return body
 
-## (5)
+## (4)
 
 # Strip last pre tag from body
 def strip_last_pre(body):
     Pre = body.findAll('pre')
     Pre[-1].extract()
     for div in body.findAll('div')[::-1]:
-      if all(i in div['class'] 
-             for i in ['cell', 'border-box-sizing', 'code_cell', 'rendered']):
-        div.extract()
-        break
-    print "[{}]".format(NAME), '... strip last <pre> and parent <div> (which inserts CSS into NB)'
+        if all(i in div['class'] for i in ['cell','border-box-sizing','code_cell','rendered']):
+            div.extract()
+            break
+    for div in body.findAll('div')[::-1]:
+        if all(i in div['class'] for i in ['cell','border-box-sizing','text_cell','rendered']):
+            div.extract()
+            break
+    for div in body.findAll('div')[::-1]:
+        if all(i in div['class'] for i in ['cell','border-box-sizing','text_cell','rendered']):
+            div.extract()
+            break
     return body
 
 ## (*)
@@ -103,7 +88,7 @@ def get_translate():
         translate = json.load(f)
     return translate
 
-# Get the directory tree for body.txt and head.txt leaves
+# Get the directory tree for body.html leaf
 def get_tree(file_html, translate):
     branch="published/"
     file_html_base = os.path.basename(file_html)
@@ -112,7 +97,7 @@ def get_tree(file_html, translate):
         if old_base == file_html_base:
             return "{branch}{leaf}/".format(branch=branch,leaf=leaf)
     else:
-        print "[{}]".format(NAME), '... URL tail not found in translate.json'
+        print "[{}]".format(NAME), '!!! URL tail not found in translate.json'
 
 # Make directory tree
 def make_tree(tree):
@@ -122,9 +107,9 @@ def make_tree(tree):
     else:
         print "[{}]".format(NAME), '...', tree, 'already exists OK'
 
-# Replace body.txt templates
+# Replace body.html templates
 def replace_templates(body, tree):
-    for temp, f_temp in zip([body],['body.txt']):
+    for temp, f_temp in zip([body],['body.html']):
         path_temp = os.path.join(tree, f_temp)
         with open(path_temp, "wb") as f:
             print "[{}]".format(NAME), '... writes in', f_temp
@@ -144,11 +129,7 @@ def main():
         # (1)
         body = get_body(soup) 
 
-        # (2)
-        body = replace_title_href(body)
-        body = strip_title(body)
-        
-        # (3), (4), (5)
+        # (2), (3), (4)
         body = strip_style(body)
         body = strip_script(body)
         body = strip_last_pre(body)

@@ -23,12 +23,11 @@ def get_args():
     else:
         return args
 
-# Get URLs of domains 
+# Get URLs of domains from domains.json
 def get_domains():
-    return dict(
-        nbviewer="http://nbviewer.ipython.org/github/plotly/python-user-guide/blob/master/",
-        plotly="https://plot.ly/python/"  # the web page
-    )
+    with open("./scripts/inputs/domains.json") as f:
+        domains = json.load(f)
+    return domains
 
 # Get translate.json, to translate URL tails from 
 # nbviewer to plot.ly domain
