@@ -13,6 +13,7 @@ convert: $(ug-nbs)
 
 publish:
 	ipython scripts/translate_href-html.py converted/*.html
+	ipython scripts/image-map.py converted/*.html
 	ipython scripts/publish.py converted/*.html
 	ipython scripts/make_config.py
 
