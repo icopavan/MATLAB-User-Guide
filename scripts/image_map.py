@@ -9,7 +9,7 @@ import sys
 #
 # -------------------------------------------------------------------------------
 
-NAME="image-map"  # file name
+NAME="image_map"  # file name
 
 # Get input arguments 
 def get_args():

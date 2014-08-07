@@ -5,7 +5,8 @@ instructions:
 ug-nbs = \
 	welcome_home.ipynb \
 	getting_started.ipynb \
-	overview.ipynb 00_Scatter_\&_Line_Plots.ipynb
+	overview.ipynb \
+	00_Scatter_\&_Line_Plots.ipynb
 
 convert: $(ug-nbs)
 	ipython nbconvert --to html $(ug-nbs)
@@ -13,7 +14,7 @@ convert: $(ug-nbs)
 
 publish:
 	ipython scripts/translate_href-html.py converted/*.html
-	ipython scripts/image-map.py converted/*.html
+	ipython scripts/image_map.py converted/*.html
 	ipython scripts/publish.py converted/*.html
 	ipython scripts/make_config.py
 
