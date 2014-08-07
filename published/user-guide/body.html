@@ -1,0 +1,566 @@
+<body>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/pmat.png" style="width: 400px; height: 200px; margin-left: 30.15%;margin-right: auto"/>
+</center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1>
+        MATLAB API USER GUIDE
+       </h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+</p>
+<center>
+<h6>
+         Analyze and visualize data, together.
+        </h6>
+</center>
+<blockquote>
+<p>
+         "Here at
+         <strong>
+          Plotly
+         </strong>
+         , we are on a mission to build a platform where data scientists can
+         <strong>
+          analyze data, create beautiful graphs
+         </strong>
+         and
+         <strong>
+          collaborate
+         </strong>
+         : like a GitHub for data, where you can share and find plots, data, and code."
+         <font size="2pt">
+          - Matt Sundquist Plotly's Co-Founder.
+         </font>
+</p>
+</blockquote>
+<p>
+<br/>
+<br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+</p>
+<h5>
+        New to Plotly?
+       </h5>
+<br/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+        Plotly is a
+        <strong>
+         browser-based
+        </strong>
+        data analysis and visualization tool that creates
+        <strong>
+         interactive
+        </strong>
+        ,
+        <strong>
+         customizable
+        </strong>
+        ,
+        <strong>
+         publication quality figures
+        </strong>
+        . This API allows MATLAB users to generate
+        <strong>
+         Plotly
+        </strong>
+        graphs from their desktop
+        <strong>
+         MATLAB
+        </strong>
+        environment. All graphs can be styled and shared through Plotly's interactive web application.
+        <br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+</p>
+<h5>
+        Plotly MATLAB API Workflow:
+       </h5>
+<br/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+         Collect or generate some data in your MATLAB environment
+        </li>
+<li>
+         Send data to your Plotly account through this Plotly MATLAB API
+        </li>
+<li>
+         View interactive graph in your browser
+        </li>
+<li>
+         Style graph in the Plotly GUI
+        </li>
+<li>
+         Share graph by URL shortlinks, Facebook, or Twitter
+        </li>
+<li>
+         Export to PNG, PDF, EPS, SVG
+         <br/>
+<br/>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5>
+        Plotly MATLAB API Updates:
+       </h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>
+<font color="red">
+<strong>
+           *NEW*
+          </strong>
+</font>
+         Plot your MATLAB figure objects with Plotly using
+         <strong>
+          fig2plotly.m
+         </strong>
+</li>
+<li>
+<font color="red">
+<strong>
+           *NEW*
+          </strong>
+</font>
+         Get data, style, and layout from the plots stored online
+         <strong>
+          getplotlyfig.m
+         </strong>
+</li>
+<li>
+<font color="red">
+<strong>
+           *NEW*
+          </strong>
+</font>
+         Save your Plotly figures as an image in MATLAB using
+         <strong>
+          saveplotlyfig.m
+         </strong>
+</li>
+</ul>
+<p>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5>
+        Why a User Guide?
+       </h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+        This User Guide is designed to provide a
+        <strong>
+         documentation
+        </strong>
+        of The Plotly MATLAB API functionality. Whereas the documentation provided
+        <a class="nounderline" href="https://plot.ly/MATLAB/">
+         ONLINE
+        </a>
+        serves as a nice reference for begginner/intermediate users, these notebooks provide a richer learning experience, enabling beginer/intermediate users to quickly become Plotly Gurus!
+       </p>
+<p>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5>
+        Getting Intimate with the User Guide:
+       </h5>
+<p>
+        These user guide notebooks are inteded to be read online and are rendered using the
+        <a class="nounderline" href="http://nbviewer.ipython.org/">
+         nbviewer
+        </a>
+        website. However, if you want to get your hands dirty and use these notebooks more interactively, the source code lives
+        <a class="nounderline" href="https://github.com/BRONSOLO">
+         HERE
+        </a>
+        on github. Feel free to download the code or cloan the repository to your local machine!
+       </p>
+<p>
+<br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+</p>
+<hr size="5px"/>
+<p>
+</p>
+<center>
+<h1 id="toc">
+         TABLE OF CONTENTS
+        </h1>
+</center>
+<hr size="5px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+        Found below is a list of the various plot types handled by Plotly, covering many standard data representations. Please
+        <a class="nounderline" href="#contact">
+         LET US KNOW
+        </a>
+        if there are any plot types not covered that you want us to handle! We are constantly updating and expanding to new plot types.
+       </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<strong>
+         [0]
+        </strong>
+<a class="nounderline" href="/matlab/introduction">
+         GETTING STARTED / API DOCUMENTATION
+        </a>
+<br/>
+<strong>
+         [1]
+        </strong>
+<a class="nounderline" href="/matlab/overview">
+         OVERVIEW
+        </a>
+<br/>
+<strong>
+         [2]
+        </strong>
+<a class="nounderline" href="/matlab/line-and-scatter-plots-tutorial">
+         LINE AND SCATTER PLOTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [3]
+        </strong>
+<a class="nounderline" href="#ex">
+         BAR CHARTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [4]
+        </strong>
+<a class="nounderline" href="#ex">
+         SUBPLOTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [5]
+        </strong>
+<a class="nounderline" href="#ex">
+         ERROR BARS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [6]
+        </strong>
+<a class="nounderline" href="#ex">
+         HISTROGRAMS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [7]
+        </strong>
+<a class="nounderline" href="#ex">
+         BOX PLOTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [8]
+        </strong>
+<a class="nounderline" href="#ex">
+         HEAT MAPS AND COLOUR SCALES
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [9]
+        </strong>
+<a class="nounderline" href="#ex">
+         BUBBLE CHARTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [10]
+        </strong>
+<a class="nounderline" href="#ex">
+         2D HISTROGRAMS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [11]
+        </strong>
+<a class="nounderline" href="#ex">
+         CONTOUR PLOTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [12]
+        </strong>
+<a class="nounderline" href="#ex">
+         STREAMING AND REAL TIME DATA
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [13]
+        </strong>
+<a class="nounderline" href="#ex">
+         RETRIEVING DATA
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [14]
+        </strong>
+<a class="nounderline" href="#ex">
+         3D SURFACE PLOTS
+        </a>
+        (coming soon)
+        <br/>
+<strong>
+         [15]
+        </strong>
+<a class="nounderline" href="#ex">
+         MAPS
+        </a>
+        (coming soon)
+        <br/>
+</p>
+<hr size="5px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="contact">
+        CONTACT
+       </h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr/>
+<p>
+        Want to help improve this user guide? Please send us your comments/questions! Feedback concerning this user guide can be directed to
+        <font color="#1d3b84">
+<strong>
+          chuck [at] plot.ly
+         </strong>
+</font>
+        . You can also reach and follow us online via social media outlets.
+        <br/>
+</p>
+<div class="image-line">
+<div class="image-cell">
+<a href="https://twitter.com/plotlygraphs">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/twitter.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://www.facebook.com/Plotly">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/facebook.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://plus.google.com/101741663283396748386/posts">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/gplus.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://www.edmodo.com/publisher/plotly">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/ed.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<p>
+</p>
+</div>
+<br/>
+<br/>
+<hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+</p>
+<p>
+</p>
+<h4>
+</h4>
+<p>
+</p>
+<center>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+</center>
+<br/>
+<br/>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</body>

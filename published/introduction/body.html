@@ -1,0 +1,1565 @@
+<body>
+<div class="border-box-sizing" id="notebook" tabindex="-1">
+<div class="container" id="notebook-container">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/pmat.png" style="width: 400px; height: 200px; margin-left: 30.15%;margin-right: auto"/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<h1>
+         GETTING STARTED
+        </h1>
+</center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>
+         This notebook provides an
+         <strong>
+          INTRODUCTION
+         </strong>
+         to the Plotly Matlab API. Installation and Matlab / Plotly preliminaries are discussed. If you are comfortable with the basics, feel free to skip to the other notebooks and return to this one for reference.
+        </p>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<a class="nounderline" href="/matlab/user-guide/#toc">
+         TABLE OF CONTENTS
+        </a>
+<strong>
+         •
+        </strong>
+<a class="nounderline" href="#install">
+         DOWNLOAD/STARTUP
+        </a>
+<strong>
+         •
+        </strong>
+<a class="nounderline" href="#doc">
+         FUNCTION DOCUMENTATION
+        </a>
+</center>
+<p>
+<br/>
+<br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h6>
+        START UP:
+       </h6>
+<p>
+        Throughout this notebook we will be using the awesome
+        <a class="nounderline" href="https://pypi.python.org/pypi/pymatbridge/0.1/">
+         pymatbridge
+        </a>
+        package to communicate with MATLAB from Python. Everything that comes below the
+        <strong>
+         %%matlab
+        </strong>
+        decorator will now be read as MATLAB code! To use the MATLAB API on your own machine, simply open the MATLAB application as you normally would.
+        <br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT">
+        &gt;&gt; OPEN YOUR MATLAB ENVIRONMENT
+        <a class="anchor-link" href="#&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT">
+         ¶
+        </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+       In [14]:
+      </div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight">
+<pre><span class="o">%</span><span class="k">load_ext</span> <span class="n">pymatbridge</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt">
+</div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+The pymatbridge extension is already loaded. To reload it, use:
+  %reload_ext pymatbridge
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+</p>
+<h6>
+        SIGN UP:
+       </h6>
+<p>
+        If you are already signed up with Plotly, skip ahead. If not - no worries! You can either sign up for a
+        <strong>
+         FREE
+        </strong>
+        Plotly account
+        <a class="nounderline" href="http://www.plot.ly">
+         ONLINE
+        </a>
+<em>
+         or
+        </em>
+        from the comfort of your MATLAB command window using the
+        <strong>
+         signup.m
+        </strong>
+        function. Just copy and uncomment the lines in the code below into your Matlab command window. You'll also need to provide a username of your choice and valid email address!
+       </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&gt;&gt;-SIGN-UP-WITH-PLOTLY!">
+        &gt;&gt; SIGN UP WITH PLOTLY!
+        <a class="anchor-link" href="#&gt;&gt;-SIGN-UP-WITH-PLOTLY!">
+         ¶
+        </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+       In [3]:
+      </div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight">
+<pre><span class="o">%%</span><span class="k">matlab</span>
+<span class="o">%</span><span class="k">username</span> <span class="o">=</span> <span class="n">PICK_A_USERNAME</span><span class="p">;</span>
+<span class="o">%</span><span class="k">email</span> <span class="o">=</span> <span class="n">VALID_EMAIL_ADDRESS</span><span class="p">;</span>
+<span class="o">%</span><span class="k">response</span> <span class="o">=</span> <span class="n">signup</span><span class="p">(</span><span class="n">username</span><span class="p">,</span><span class="n">email</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+</p>
+<h6>
+        SET UP:
+       </h6>
+<p>
+        Once you are signed up with Plotly, you can setup up the Plotly MATLAB API with the newly added
+        <strong>
+         plotlysetup.m
+        </strong>
+        function. This function takes your username and API key as input and embeds the Plotly API into your MATLAB toolboxes folder and permanently saves your username and API key into a credentials file within a plotly folder located in your directory. Your MATLAB API key can be located
+        <a class="nounderline" href="http://www.plot.ly">
+         ONLINE
+        </a>
+        by
+        <em>
+         signing in
+        </em>
+        and clicking on the
+        <em>
+         settings
+        </em>
+        tab located under your username in the right hand corner of the browser.
+       </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="&gt;&gt;-SETUP-THE-PLOTLY-API">
+        &gt;&gt; SETUP THE PLOTLY API
+        <a class="anchor-link" href="#&gt;&gt;-SETUP-THE-PLOTLY-API">
+         ¶
+        </a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+       In [25]:
+      </div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight">
+<pre><span class="o">%%</span><span class="k">matlab</span>
+<span class="n">plotlysetup</span><span class="p">(</span><span class="s">'matlab_user_guide'</span><span class="p">,</span><span class="s">'7jd7qa2s10'</span><span class="p">);</span> 
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt">
+</div>
+<div class="output_text output_subarea ">
+<pre>
+
+Adding Plotly to MATLAB toolbox directory ... Done
+Saving Plotly to MATLAB search path via startup.m ...  Done
+Saving user credentials ... Done
+
+Welcome to Plotly! If you are new to Plotly please enter: &gt;&gt;plotlyhelp to get started!
+
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+        Now everytime you open MATLAB, the Plotly API will be automatically added to the searchpath and you will be automatically signed in and ready to start plotting!
+       </p>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+</p>
+<p>
+</p>
+<hr size="5px"/>
+<h5 id="doc">
+        FUNCTION DOCUMENTATION
+       </h5>
+<hr size="5px"/>
+<div class="col1">
+<h6>
+         SETUP FUNCTIONS
+        </h6>
+<h4>
+<a class="nounderlineblack" href="#ps">
+          &gt;&gt; plotlysetup.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#su">
+          &gt;&gt; signup.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#si">
+          &gt;&gt; signin.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#spc">
+          &gt;&gt; saveplotlycredentials.m
+         </a>
+</h4>
+</div>
+<div class="col3">
+<h6>
+         HELP FUNCTIONS
+        </h6>
+<h4>
+<a class="nounderlineblack" href="#ph">
+          &gt;&gt; plotlyhelp.m
+         </a>
+</h4>
+</div>
+<div class="col2">
+<h6>
+         PLOT FUNCTIONS
+        </h6>
+<h4>
+<a class="nounderlineblack" href="#pl">
+          &gt;&gt; plotly.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#f2p">
+          &gt;&gt; fig2plotly.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#gpf">
+          &gt;&gt; getplotlyfig.m
+         </a>
+</h4>
+<h4>
+<a class="nounderlineblack" href="#spf">
+          &gt;&gt; saveplotlyfig.m
+         </a>
+</h4>
+</div>
+<hr size="3px"/>
+<p>
+<font size="2px">
+<strong>
+          NOTE:
+         </strong>
+         required
+         <strong>
+          data type
+         </strong>
+         provded in square brackets and
+         <strong>
+          defaults
+         </strong>
+         provided in curly braces.
+        </font>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="ps">
+         &gt;&gt; plotlysetup.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Setup the Plotly MATLAB API
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+         plotlysetup.m
+        </strong>
+        function removes the need to have to add the Plotly MATLAB API to your search path everytime a new MATLAB session is started. It also automatically saves your
+        <em>
+         user_name
+        </em>
+        ,
+        <em>
+         api_key
+        </em>
+        , and
+        <em>
+         endpoint_domain (optional)
+        </em>
+        , removing the need to sign in everytime a new MATLAB session is started.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<h4>
+        &gt;&gt; plotlysetup(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        )
+       </h4>
+<h4>
+        &gt;&gt; plotlysetup(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        ,end_domain)
+       </h4>
+<p>
+<br/>
+<strong>
+<h4>
+          [WHERE]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        username - your user_name [string]
+       </h4>
+<h4>
+        api_key - your api_key [string]
+       </h4>
+<h4>
+        end_domain - enpoint domain name [struct]{end_domain.plotly_rest_url =
+        <a href="https://plot.ly">
+         https://plot.ly
+        </a>
+        }
+       </h4>
+<br/>
+<hr size="3px"/>
+<p>
+        The Plotly MATLAB API is saved in the MATLAB root toolbox directory. If the Plotly MATLAB API already exists in the toolbox directory, the user is prompted for overwrite. The MATLAB root directory
+        <em>
+         startup.m
+        </em>
+        script is modified to add the Plotly MATLAB API toolbox path to the MATLAB search path everytime a new session is started. The
+        <strong>
+         plotlysetup.m
+        </strong>
+        function calls the
+        <a class="nounderlineblack" href="#spc">
+         saveplotlycredentials.m
+        </a>
+        function and the
+        <a class="nounderlineblack" href="#si">
+<strong>
+          signin.m
+         </strong>
+</a>
+        function.
+       </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="su">
+         &gt;&gt; signup.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Signup for a free Plotly Account
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+         signup.m
+        </strong>
+        function creates a Plotly account and returns a temporary password and an api_key. This process can also be completed
+        <a class="nounderline" href="http://www.plot.ly">
+         ONLINE
+        </a>
+        .
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        &gt;&gt; resp = signup(
+        <font color="purple">
+         'username'
+        </font>
+        ,
+        <font color="purple">
+         'e-mail'
+        </font>
+        )
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        username - your new user name [string]
+       </h4>
+<h4>
+        api_key - your valid email address [string]
+       </h4>
+<br/>
+<p>
+<strong>
+<h4>
+          [OUTPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        resp - results info of the signup [struct]
+       </h4>
+<p>
+</p>
+<h4>
+        resp.[api_key,message,un,temp_pw,error]
+       </h4>
+<br/>
+<p>
+<strong>
+<h4>
+          [WHERE]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        resp.api_key - your new api key [string]
+       </h4>
+<h4>
+        resp.message - greeting message [string]
+       </h4>
+<h4>
+        resp.un - chosen username  [string]
+       </h4>
+<h4>
+        resp.temp_pw - your temporary password [string]
+       </h4>
+<h4>
+        resp.error - potential error messages [string]
+       </h4>
+<br/>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="si">
+         &gt;&gt; signin.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Sign in to your Plotly Account
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+         signin.m
+        </strong>
+        function can be used to specify your
+        <em>
+         user_name
+        </em>
+        ,
+        <em>
+         api_key
+        </em>
+        , and
+        <em>
+         endpoint_domain
+        </em>
+        (optional) for a single MATLAB session.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<h4>
+        &gt;&gt; [un key domain] = signup(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        )
+       </h4>
+<h4>
+        &gt;&gt; [un key domain] = signup(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        ,end_domain)
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<h4>
+        username - your user_name [string]
+       </h4>
+<h4>
+        api_key - your api_key [string]
+       </h4>
+<h4>
+        end_domain - enpoint domain name [struct]{end_domain.plotly_rest_url =
+        <a href="https://plot.ly">
+         https://plot.ly
+        </a>
+        }
+       </h4>
+<br/>
+<strong>
+<h4>
+         [OUTPUT]:
+        </h4>
+</strong>
+<h4>
+        un - your user_name [string]
+       </h4>
+<h4>
+        key - your api_key [string]
+       </h4>
+<h4>
+        domain - your endpoint domain [struct]{end_domain.plotly_rest_url =
+        <a href="https://plot.ly">
+         https://plot.ly
+        </a>
+        }
+       </h4>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="spc">
+         &gt;&gt; saveplotlycredentials.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Save your Plotly credentials accross MATLAB sessions
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+         saveplotlycredentials.m
+        </strong>
+        function create stores your user information (
+        <em>
+         username
+        </em>
+        ,
+        <em>
+         api_key
+        </em>
+        , and
+        <em>
+         endpoint_domain
+        </em>
+        ) in a credentials file for future reference across MATLAB sessions.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        &gt;&gt; saveplotlycredentials(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        )
+       </h4>
+<p>
+</p>
+<h4>
+        &gt;&gt; saveplotlycredentials(
+        <font color="purple">
+         'user_name'
+        </font>
+        ,
+        <font color="purple">
+         'api_key'
+        </font>
+        ,end_domain)
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        username - your user_name [string]
+       </h4>
+<h4>
+        api_key - your api_key [string]
+       </h4>
+<h4>
+        end_domain - enpoint domain name [struct]{end_domain.plotly_rest_url =
+        <a href="https://plot.ly">
+         https://plot.ly
+        </a>
+        }
+       </h4>
+<br/>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="ph">
+         &gt;&gt; plotlyhelp.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Plotly Declarative Syntax Reference
+        </h3>
+</center>
+<hr/>
+<p>
+<strong>
+<font color="red">
+          *NEW*
+         </font>
+</strong>
+        to the Plotly MATLAB API is the
+        <strong>
+         plotlyhelp.m
+        </strong>
+        function, which stores all the essential Plotly data/style/layout declarative syntax references in a nested structure array. Information regarding the Plotly declaritive syntax can be accessed by passing valid fieldnames as input to
+        <strong>
+         plotlyhelp.m
+        </strong>
+        in the order in which they are nested.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        &gt;&gt; plotlyhelp(varargin)
+       </h4>
+<h4>
+        &gt;&gt; plotlyref = plotlyhelp(varargin)
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        varargin - comma separated variable [string] arguments.
+       </h4>
+<br/>
+<p>
+<strong>
+<h4>
+          [OUTPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        plotlyref - Plotly syntax reference [struct].
+       </h4>
+<br/>
+<hr size="3px"/>
+<p>
+<font size="2px">
+<strong>
+          NOTE:
+         </strong>
+         Calling &gt;&gt;
+         <strong>
+          plotlyhelp
+         </strong>
+         with no input arguments outputs the complete first-level fieldnames of valid Plotly references.The online documentaiton can be accessed directly from MATLAB using &gt;&gt;
+         <strong>
+          plotlyhelp('online')
+         </strong>
+         .
+        </font>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="pl">
+         &gt;&gt; plotly.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Plot a MATLAB figure object with Plotly
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+         plotly.m
+        </strong>
+        function is the heart of the MATLAB API. It handles the creation of graphs in your Plotly account from MATLAB.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<h4>
+        &gt;&gt; resp = plotly(x1,y1,x2,y2,..., kwargs)
+       </h4>
+<h4>
+        &gt;&gt; resp= plotly({data1, data2, ...}, kwargs)
+       </h4>
+<p>
+<br/>
+<strong>
+<h4>
+          [WHERE]:
+         </h4>
+</strong>
+</p>
+<h4>
+        x1,y1,...xn,yn - data arrays [float]
+       </h4>
+<h4>
+        data1, ..., datan - data/style information [struct]
+       </h4>
+<h4>
+        kwargs - optional keyword arguments [struct]
+       </h4>
+<br/>
+<strong>
+<h4>
+         [KWARGS]:
+        </h4>
+</strong>
+<h4>
+        kwargs.layout - layout of plot [struct]
+       </h4>
+<h4>
+        kwargs.fileopt - plot extension (
+        <font color="purple">
+         'new'
+        </font>
+        ,
+        <font color="purple">
+         'overwrite'
+        </font>
+        ,
+        <font color="purple">
+         'append'
+        </font>
+        ,
+        <font color="purple">
+         'extend'
+        </font>
+        ) [string] {new}
+       </h4>
+<h4>
+        kwargs.traces -  array of traces to be extended [int]
+       </h4>
+<h4>
+        kwargs.world_readable - public/private plot setting (
+        <font color="purple">
+         'true'
+        </font>
+        /
+        <font color="purple">
+         'false'
+        </font>
+        ) [string] {true}
+       </h4>
+<h4>
+        kwargs.filename - name of plot to be created [string] {
+        <font color="purple">
+         'untitled'
+        </font>
+        }
+       </h4>
+<p>
+<br/>
+<strong>
+<h4>
+          [OUTPUT]:
+         </h4>
+</strong>
+</p>
+<h4>
+        resp - results info of the plot [struct]
+       </h4>
+<p>
+<br/>
+<strong>
+<h4>
+          [WHERE]:
+         </h4>
+</strong>
+</p>
+<h4>
+        resp.url - address of your newly created Plotly plot [string]
+       </h4>
+<h4>
+        resp.warning - additional warning message [string]
+       </h4>
+<h4>
+        resp.message - additional generic messages [string]
+       </h4>
+<h4>
+        resp.filename - name of plot created [string]
+       </h4>
+<h4>
+        resp.error - any error messages received [string]
+       </h4>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<center>
+<h2 id="f2p">
+         fig2plotly.m
+        </h2>
+</center>
+<hr/>
+<center>
+<h3>
+         Plot a MATLAB figure object with Plotly
+        </h3>
+</center>
+<hr/>
+<p>
+<strong>
+<font color="red">
+          *NEW*
+         </font>
+</strong>
+        to the Plotly MATLAB API is the
+        <strong>
+         fig2plotly.m
+        </strong>
+        function - the future of the MATLAB API.
+        <strong>
+         fig2plotly.m
+        </strong>
+        allows you to take your MATLAB generated figures and automatically create a Plotly plot, taking care of the conversion from the MATLAB figure object structure to Plotly syntax.
+       </p>
+<hr size="3px"/>
+<p>
+<strong>
+<h4>
+          [INPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        &gt;&gt; resp = fig2plotly()
+       </h4>
+<h4>
+        &gt;&gt; resp = fig2plotly(f)
+       </h4>
+<h4>
+        &gt;&gt; resp = fig2plotly(gcf)
+       </h4>
+<h4>
+        &gt;&gt; resp = fig2plotly(f,
+        <font color="purple">
+         'property'
+        </font>
+        ,value, ... )
+       </h4>
+<h4>
+        &gt;&gt; resp = fig2plotly(gcf,
+        <font color="purple">
+         'property'
+        </font>
+        ,value, ... )
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        gcf - root figure object handle [double].
+       </h4>
+<h4>
+        f - root figure object [struct] &gt;&gt; f = get(gcf)
+       </h4>
+<br/>
+<strong>
+<h4>
+         [PROPERTIES]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        'name' - name of the plot [string][
+        <font color="purple">
+         'untitled'
+        </font>
+        ]
+       </h4>
+<p>
+</p>
+<h4>
+        'strip' - use plotly default styling [boolea]{0}
+       </h4>
+<p>
+</p>
+<h4>
+        'open' - opens a browser with plot result [boolean]{1}
+       </h4>
+<br/>
+<p>
+<strong>
+<h4>
+          [OUTPUT]:
+         </h4>
+</strong>
+</p>
+<p>
+</p>
+<h4>
+        resp - results info of the plot [struct]
+       </h4>
+<br/>
+<strong>
+<h4>
+         [WHERE]:
+        </h4>
+</strong>
+<p>
+</p>
+<h4>
+        resp.url - address of your newly created Plotly plot [string]
+       </h4>
+<p>
+</p>
+<h4>
+        resp.warning - additional warning message [string]
+       </h4>
+<p>
+</p>
+<h4>
+        resp.message - additional generic messages [string]
+       </h4>
+<p>
+</p>
+<h4>
+        resp.filename - name of plot created [string]
+       </h4>
+<p>
+</p>
+<h4>
+        resp.error - any error messages received [string]
+       </h4>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<h2 id="gpf">
+        &gt;&gt; getplotlyfig.m
+       </h2>
+<hr/>
+<center>
+<h3>
+         Get data, style, and layout from the plots stored online
+        </h3>
+</center>
+<hr/>
+<p>
+        One of Plotly's secret powers is the ability to translate between MATLAB's structure/cell array syntax and JSON. This allows a smooth transition between the your figures in MATLAB and those stored in your Plotly account. In order to grab the data, style, and layout information from your plots living online, we've introduce a
+        <strong>
+<font color="red">
+          *NEW*
+         </font>
+</strong>
+        funtion into the API:
+        <strong>
+         getplotlyfig.m
+        </strong>
+        . In fact, we can go one step further:
+        <strong>
+         getploylyfig.m
+        </strong>
+        lets you grab the data, style and layout of
+        <em>
+         anyone's
+        </em>
+        Plotly plots (as long as they are made public) - not just your own! See a graph you like online? Grab the data, style and layout and make one for yourself.
+       </p>
+<hr size="3px"/>
+<h4>
+<strong>
+         [INPUT]:
+        </strong>
+</h4>
+<h4>
+        &gt;&gt; plotlyfigure = fig2plotly(
+        <font color="purple">
+         'file_owner'
+        </font>
+        ,
+        <font color="purple">
+         'file_id'
+        </font>
+        )
+       </h4>
+<br/>
+<h4>
+<strong>
+         [WHERE]:
+        </strong>
+</h4>
+<h4>
+        file_owner - user name associated with the plot [string].
+       </h4>
+<h4>
+        file_id - number identifier associated with the plot [string]
+       </h4>
+<br/>
+<h4>
+<strong>
+         [OUTPUT]:
+        </strong>
+</h4>
+<p>
+</p>
+<h4>
+        plotlyfigure - results info of the plot [struct]
+       </h4>
+<br/>
+<p>
+</p>
+<h4>
+<strong>
+         [WHERE]:
+        </strong>
+</h4>
+<p>
+</p>
+<h4>
+        plotlyfigure.data - data information associated with the plot [cell].
+       </h4>
+<p>
+</p>
+<h4>
+        plotlyfigure.layout - layout information associated with the plot [struct]
+       </h4>
+<br/>
+<hr size="3px"/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+<h2 id="spf">
+        &gt;&gt; saveplotlyfig.m
+       </h2>
+<hr/>
+<center>
+<h3>
+         Save your MATLAB figure as an image using Plotly
+        </h3>
+</center>
+<hr/>
+<p>
+        The
+        <strong>
+<font color="red">
+          *NEW*
+         </font>
+</strong>
+<strong>
+         saveplotlyfig.m
+        </strong>
+        allows for conversion from MATLAB figures to PNG using Plotly.
+       </p>
+<hr size="3px"/>
+<h4>
+<strong>
+         [INPUT]:
+        </strong>
+</h4>
+<h4>
+        &gt;&gt; saveplotlyfig(data, layout,
+        <font color="purple">
+         'filename'
+        </font>
+        )
+       </h4>
+<br/>
+<h4>
+<strong>
+         [WHERE]:
+        </strong>
+</h4>
+<br/>
+<h4>
+        data - data/style of plot [cell]
+       </h4>
+<h4>
+        layout - layout of plot [struct]
+       </h4>
+<h4>
+        filename - name of image to be saved [string]
+       </h4>
+<br/>
+<h4>
+<strong>
+         [OUTPUT]:
+        </strong>
+</h4>
+<h4>
+        PNG image 'filename' saved to your working directory
+       </h4>
+<hr size="3px"/>
+<p>
+        Currently
+        <strong>
+         saveplotlyfig.m
+        </strong>
+        supports the creation of PNG images and is in the process of expanding to accomodate other graphics formats.
+       </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<center>
+<h1 id="contact">
+         [CONTACT]
+        </h1>
+</center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr/>
+<p>
+        Want to help improve this user guide? Please send us your comments/questions! Feedback concerning this user guide can be directed to
+        <font color="#1d3b84">
+<strong>
+          chuck [at] plot.ly
+         </strong>
+</font>
+        . You can also reach and follow us online via social media outlets.
+        <br/>
+</p>
+<div class="image-line">
+<div class="image-cell">
+<a href="https://twitter.com/plotlygraphs">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/twitter.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://www.facebook.com/Plotly">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/facebook.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://plus.google.com/101741663283396748386/posts">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/gplus.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<div class="image-cell">
+<a href="https://www.edmodo.com/publisher/plotly">
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/ed.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
+</a>
+</div>
+<p>
+</p>
+</div>
+<br/>
+<br/>
+<hr/>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>
+<br/>
+</p>
+<p>
+</p>
+<h4>
+</h4>
+<p>
+</p>
+<center>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+<strong>
+         •
+        </strong>
+<br/>
+<br/>
+</center>
+<br/>
+<br/>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</body>

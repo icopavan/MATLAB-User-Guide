@@ -1,2 +1,3 @@
-
-.ipynb_checkpoints/overview-checkpoint.ipynb
+.ipynb_checkpoints/*
+*/.ipynb_checkpoints/
+converted/*

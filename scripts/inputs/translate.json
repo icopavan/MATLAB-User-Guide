@@ -1,0 +1,6 @@
+{
+    "welcome_home.ipynb" : "user-guide",
+    "getting_started.ipynb" : "introduction",
+    "overview.ipynb" : "overview",
+    "00_Scatter_&_Line_Plots.ipynb" : "line-and-scatter-plots-tutorial"
+}
