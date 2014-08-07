@@ -19,7 +19,7 @@ publish:
 	ipython scripts/make_config.py
 
 push-to-streambed:
-	cp -R published/* ../streambed/shelly/api_docs/templates/api_docs/user-guide/matlab
+	cp -R published/* ../streambed/shelly/templates/api_docs/includes/user-guide/matlab/
 
 link-nbs-to-plotly: $(ug-nbs)
 	ipython scripts/translate_href-ipynb.py $(ug-nbs)
