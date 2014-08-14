@@ -1,5 +1,5 @@
 instructions:
-	cat make_instructions.md
+	cat Contributing.md
 
 # List of notebook paths to be used in the plot.ly User Guide
 ug-nbs = \
@@ -17,9 +17,13 @@ publish:
 	ipython scripts/image_map.py converted/*.html
 	ipython scripts/publish.py converted/*.html
 	ipython scripts/make_config.py
+	ipython scripts/make_urls.py
+	ipython scripts/make_sitemaps.py
 
 push-to-streambed:
-	cp -R published/* ../streambed/shelly/templates/api_docs/includes/user-guide/matlab/
+	cp -R published/includes/* ../streambed/shelly/templates/api_docs/includes/user_guide/matlab/
+	cp published/matlab_urls.py ../streambed/shelly/api_docs/urls/user_guide/
+	cp published/matlab_sitemaps.py ../streambed/shelly/api_docs/sitemaps/user_guide/
 
 link-nbs-to-plotly: $(ug-nbs)
 	ipython scripts/translate_href-ipynb.py $(ug-nbs)
