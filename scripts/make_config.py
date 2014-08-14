@@ -38,7 +38,7 @@ def get_config(chapter):
     #
 
     # Set fields
-    name = titled(base.replace(' tutorial',''))
+    name = base.capitalize().replace(' tutorial','')
     title = "{} | MATLAB User Guide | plotly".format(titled(base))
     descrip = (
         "A tutorial on how to make beautiful {} "
