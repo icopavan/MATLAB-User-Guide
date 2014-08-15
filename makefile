@@ -3,10 +3,8 @@ instructions:
 
 # List of notebook paths to be used in the plot.ly User Guide
 ug-nbs = \
-	welcome_home.ipynb \
-	getting_started.ipynb \
-	overview.ipynb \
-	00_Scatter_\&_Line_Plots.ipynb
+	overviewpub.ipynb \
+	plotlystreampub.ipynb
 
 convert: $(ug-nbs)
 	ipython nbconvert --to html $(ug-nbs)

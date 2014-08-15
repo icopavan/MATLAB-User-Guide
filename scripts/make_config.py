@@ -56,6 +56,13 @@ def get_config(chapter):
     if chapter == 'overview':
         title = "Overview of Plotly and its MATLAB API Library"
         descrip = "An overview of plotly and its MATLAB API Library"
+    if chapter == 'streaming-tutorial': 
+        name = "Streaming plots"
+        title = "Overview of Streaming Plots | MATLAB User Guide | plotly" 
+        descrip = (
+            'An overview of plotly streaming plots '
+            'with plotly and MATLAB.'
+        )
 
     # Output
     config = dict(
