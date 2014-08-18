@@ -60,8 +60,7 @@ def get_config(chapter):
         name = "Streaming plots"
         title = "Overview of Streaming Plots | MATLAB User Guide | plotly" 
         descrip = (
-            'An overview of plotly streaming plots '
-            'with plotly and MATLAB.'
+            "How to graph data in real-time with plotly and MATLAB."
         )
 
     # Output
