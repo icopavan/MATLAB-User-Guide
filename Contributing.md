@@ -27,7 +27,8 @@
    notebook making the user guide.
 
 5. Run `$ make-push-to-streambed` to copy the relevant file structure to 
-   the `streambed/` repo (assumed to be one level down in your path).
+   the `streambed/` repo (assumed to be one level down in your path and on the
+   desired branch).
 
 Once step 1 to 5 are completed and that `streambed/` is updated, run
 `$ make link-nbs-to-plotly` and update the remote repo to link the notebooks 
@@ -52,13 +53,17 @@ on nbviewer to plot.ly (hence redirecting traffic to plot.ly!).
     - [scripts/image_map.py] map image sources from `./images/` to
       https://raw.githubcontent.com/..
     - [scripts/publish.py] strip the HTML body from style tags, remove undesired
-      cells, print results in `./published/<url-tail>/body.html` where
+      cells, print results in `./published/includes/<url-tail>/body.html` where
       <url-tail> is taken from `scripts/inputs/translate.json`.
     - [scripts/make_config.py] generate a config.json for each notebook with
       meta info and etc. 
+    - [scripts/make_urls.py] generate a python file listing all the urls
+      patterns of the published notebooks. 
+    - [scripts/make_sitemaps.py] generate a python file listing all the sitemap
+      items of the published notebooks. 
       
 + `push-to-streambed`:
-    - copy published subdirectories to `streambed` (assuming `streambed/` in 
+    - copy published subdirectories to `streambed` (assuming `streambed/` is
       one level down in your path).
 
 + `link-nbs-to-plotly`:

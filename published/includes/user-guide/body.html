@@ -7,7 +7,7 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center>
-<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/pmat.png" style="width: 400px; height: 200px; margin-left: 24.5%;margin-right: auto"/>
+<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/pmat.png" style="width: 400px; height: 200px; margin-left: 22.5%;margin-right: auto"/>
 </center>
 </div>
 </div>
@@ -17,11 +17,7 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<h1>
-         PLOTLY MATLAB API
-        </h1>
-</center>
+
 </div>
 </div>
 </div>
@@ -31,44 +27,35 @@
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote>
-<center>
-         WELCOME! This Notebook is designed to demonstrate the use of the Plotly MATLAB API and to showcase three
+<p>
+         WELCOME! This Notebook is designed to demonstrate the use of Plotly's MATLAB API and to showcase three
          <strong>
 <font color="red">
            *NEW*
           </font>
 </strong>
          API functions:
-        </center>
-</blockquote>
+         <br/>
+<br/>
+</p>
 <center>
-<h6>
 <a class="nounderlineblack" href="#f2p">
           fig2plotly.m
          </a>
-</h6>
 <strong>
-         •
-        </strong>
-<h6>
+          •
+         </strong>
 <a class="nounderlineblack" href="#gpf">
           getplotlyfig.m
          </a>
-</h6>
 <strong>
-         •
-        </strong>
-<h6>
+          •
+         </strong>
 <a class="nounderlineblack" href="#spf">
           saveplotlyfig.m
          </a>
-</h6>
 </center>
-<p>
-<br/>
-<br/>
-<br/>
-</p>
+</blockquote>
 </div>
 </div>
 </div>
@@ -77,9 +64,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5>
+<h3 id="New-to-Plotly?">
         New to Plotly?
-       </h5>
+        <a class="anchor-link" href="#New-to-Plotly?">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -124,9 +114,7 @@
          interactive, shareable, collaborative
         </strong>
         projects.
-        <br/>
-<br/>
-</p>
+       </p>
 </div>
 </div>
 </div>
@@ -135,9 +123,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5>
+<h3 id="Plotly-MATLAB-API-Workflow:">
         Plotly MATLAB API Workflow:
-       </h5>
+        <a class="anchor-link" href="#Plotly-MATLAB-API-Workflow:">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -213,9 +204,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5>
+<h3 id="Initial-Setup:">
         Initial Setup:
-       </h5>
+        <a class="anchor-link" href="#Initial-Setup:">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -257,9 +251,12 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4>
+<h5 id="&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
         &gt;&gt; OPEN YOUR MATLAB ENVIRONMENT!
-       </h4>
+        <a class="anchor-link" href="#&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
+         ¶
+        </a>
+</h5>
 </div>
 </div>
 </div>
@@ -286,7 +283,7 @@
 <pre>
 Starting MATLAB on ZMQ socket ipc:///tmp/pymatbridge
 Send 'exit' command to kill the server
-.MATLAB started and connected!
+..............................MATLAB started and connected!
 
 </pre>
 </div>
@@ -350,65 +347,69 @@ Send 'exit' command to kill the server
 <hr size="5px"/>
 <p>
 <strong>
-<h4>
-          [INPUT]:
-         </h4>
-</strong>
+         [INPUT]:
+        </strong>
 </p>
-<h4>
-        &gt;&gt; resp = fig2plotly()
-       </h4>
-<h4>
-        &gt;&gt; resp = fig2plotly(f)
-       </h4>
-<h4>
-        &gt;&gt; resp = fig2plotly(gcf)
-       </h4>
-<h4>
-        &gt;&gt; resp = fig2plotly(f,'property',value, ... )
-       </h4>
-<h4>
-        &gt;&gt; resp = fig2plotly(gcf,'property',value, ... )
-       </h4>
+<p>
+        resp = fig2plotly()
+       </p>
+<p>
+        resp = fig2plotly(f)
+       </p>
+<p>
+        resp = fig2plotly(gcf)
+       </p>
+<p>
+        resp = fig2plotly(f,'property',value, ... )
+       </p>
+<p>
+        resp = fig2plotly(gcf,'property',value, ... )
+       </p>
+<p>
 <br/>
+</p>
+<p>
 <strong>
-<h4>
          [WHERE]:
-        </h4>
-</strong>
-<h4>
+        </strong>
+</p>
+<p>
         gcf - root figure object handle [double].
-       </h4>
-<h4>
+       </p>
+<p>
         f - root figure object [struct] &gt;&gt; f = get(gcf)
-       </h4>
+       </p>
+<p>
 <br/>
+</p>
+<p>
 <strong>
-<h4>
          [PROPERTIES]:
-        </h4>
-</strong>
-<h4>
+        </strong>
+</p>
+<p>
         'name' - name of the plot [string]['untitled']
-       </h4>
-<h4>
-        'strip' - use plotly default styling [boolea][0]
-       </h4>
-<h4>
+       </p>
+<p>
+        'strip' - use plotly default styling [boolean][0]
+       </p>
+<p>
         'open' - opens a browser with plot result [boolean][1]
-       </h4>
+       </p>
+<p>
 <br/>
+</p>
+<p>
 <strong>
-<h4>
          [OUTPUT]:
-        </h4>
-</strong>
-<h4>
+        </strong>
+</p>
+<p>
         resp - results info of the plot [struct]
-       </h4>
-<h4>
+       </p>
+<p>
         resp.[url,warning,message,filename,error]
-       </h4>
+       </p>
 <hr size="5px"/>
 <p>
         If you are properly signed up / in, the
@@ -456,12 +457,11 @@ Send 'exit' command to kill the server
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-</p>
-<h5 id="ex1">
+<h3 id="-p-id-ex1-example-1-fig2plotly-m-p-">
+</h3>
+<p id="ex1">
         Example 1: fig2plotly.m
-       </h5>
+       </p>
 </div>
 </div>
 </div>
@@ -1024,7 +1024,7 @@ https://plot.ly/~matlab_user_guide/661
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-       In [32]:
+       In [9]:
       </div>
 <div class="inner_cell">
 <div class="input_area">
@@ -1235,14 +1235,12 @@ https://plot.ly/~matlab_user_guide/661
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
+<h3 id="-br-br-br-example-2-fig2plotly-m">
 <br/>
 <br/>
 <br/>
-</p>
-<h5>
         Example 2: fig2plotly.m
-       </h5>
+       </h3>
 </div>
 </div>
 </div>
@@ -1617,22 +1615,10 @@ D3QCZRhSvK8ZAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
+<h3 id="-br-example-3a-fig2plotly-m">
 <br/>
-<br/>
-<br/>
-</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5>
         Example 3A: fig2plotly.m
-       </h5>
+       </h3>
 </div>
 </div>
 </div>
@@ -2002,7 +1988,7 @@ https://plot.ly/~matlab_user_guide/664
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-       In [39]:
+       In [10]:
       </div>
 <div class="inner_cell">
 <div class="input_area">
@@ -2017,7 +2003,7 @@ https://plot.ly/~matlab_user_guide/664
 <div class="output">
 <div class="output_area">
 <div class="prompt output_prompt">
-         Out[39]:
+         Out[10]:
         </div>
 <div class="output_html rendered_html output_subarea output_pyout">
 <iframe frameborder="0" height="650" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/664/800/650" width="800">
@@ -2077,9 +2063,11 @@ https://plot.ly/~matlab_user_guide/664
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<center>
 <h1 id="gpf">
-        getplotlyfig.m
-       </h1>
+         getplotlyfig.m
+        </h1>
+</center>
 </div>
 </div>
 </div>
@@ -2125,42 +2113,40 @@ https://plot.ly/~matlab_user_guide/664
         Plotly plots (as long as they are made public) - not just your own! See a graph you like online? Grab the data, style and layout and make one for yourself.
        </p>
 <hr size="5px"/>
-<h4>
+<p>
 <strong>
          [INPUT]:
         </strong>
-</h4>
-<h4>
-        &gt;&gt; plotlyfigure = fig2plotly(file_owner,file_id)
-       </h4>
+</p>
+<p>
+        plotlyfigure = getplotlyfig(file_owner,file_id)
+       </p>
+<p>
 <br/>
-<h4>
+</p>
+<p>
 <strong>
          [WHERE]:
         </strong>
-</h4>
-<h4>
+</p>
+<p>
         file_owner - user name associated with the plot [string].
-       </h4>
-<h4>
+       </p>
+<p>
         file_id - number identifier associated with the plot [string]
-       </h4>
+       </p>
+<p>
 <br/>
-<h4>
+</p>
+<p>
 <strong>
          [OUTPUT]:
         </strong>
-</h4>
-<p>
 </p>
-<h4>
+<p>
         plotlyfigure - results info of the plot [struct]
-       </h4>
-<p>
-</p>
-<h4>
-        plotlyfigure.[data,layout]
-       </h4>
+plotlyfigure.[data,layout]
+       </p>
 <hr size="5px"/>
 <p>
         If the provided input arguments are valid,
@@ -2201,14 +2187,12 @@ https://plot.ly/~matlab_user_guide/664
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-<br/>
-<br/>
-</p>
-<h5>
+<h3 id="Example-3B:-getplotlyfig.m">
         Example 3B: getplotlyfig.m
-       </h5>
+        <a class="anchor-link" href="#Example-3B:-getplotlyfig.m">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2367,14 +2351,12 @@ https://plot.ly/~matlab_user_guide/775
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-<br/>
-<br/>
-</p>
-<h5>
+<h3 id="Example-4:-getplotlyfig.m">
         Example 4: getplotlyfig.m
-       </h5>
+        <a class="anchor-link" href="#Example-4:-getplotlyfig.m">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -2822,9 +2804,11 @@ https://plot.ly/~matlab_user_guide/777
 <p>
 <br/>
 </p>
+<center>
 <h1 id="spf">
-        saveplotlyfig.m
-       </h1>
+         saveplotlyfig.m
+        </h1>
+</center>
 </div>
 </div>
 </div>
@@ -2852,71 +2836,58 @@ https://plot.ly/~matlab_user_guide/777
 <strong>
          saveplotlyfig.m
         </strong>
-        allows you to convert your MATLAB figures into static images using Plotly.
+        allows you to convert your MATLAB figures into static images (.png, .svg, .pdf, .jpeg) using Plotly.
        </p>
 <hr size="5px"/>
-<h4>
+<p>
 <strong>
          [INPUT]:
         </strong>
-</h4>
-<h4>
-        &gt;&gt; saveplotlyfig(data, filename)
-       </h4>
-<h4>
-        &gt;&gt; saveplotlyfig(plotlyfigure, filename)
-       </h4>
+</p>
+<p>
+        saveplotlyfig(data, filename, format {otional})
+       </p>
+<p>
+        saveplotlyfig(plotlyfigure, filename, format {optional})
+       </p>
+<p>
+<strong>
+         NOTE:
+        </strong>
+        if format is unspecified, saveplotlyfig will use the image format given by the  extension of filename. If filename does not have an explicit extension (ex: filename.pdf), the default format of PNG will be used for the conversion.
+       </p>
+<p>
 <br/>
-<h4>
+</p>
+<p>
 <strong>
          [WHERE]:
         </strong>
-</h4>
-<h4>
+</p>
+<p>
         data - data/style of plot [cell array]
-       </h4>
-<h4>
+       </p>
+<p>
         plotlyfigure.data - data/style of plot [cell array]
-       </h4>
-<h4>
+       </p>
+<p>
         plotlyfigure.layout - layout of plot [struct]
-       </h4>
-<h4>
+       </p>
+<p>
         filename - name of image to be saved [string]
-       </h4>
+       </p>
+<p>
 <br/>
-<h4>
+</p>
+<p>
 <strong>
          [OUTPUT]:
         </strong>
-</h4>
-<h4>
-        PNG image 'filename' saved to your working directory
-       </h4>
-<hr size="5px"/>
+</p>
 <p>
-        Currently
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        supports PNG, PDF, JPEG, and SVG. If
-        <strong>
-         data
-        </strong>
-        ,
-        <strong>
-         layout
-        </strong>
-        and
-        <strong>
-         filename
-        </strong>
-        are structure correctly,
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        will automatically save the PNG image named 'filename' to your working directory.
+        Image 'filename' of the specified format (PNG, PDF, JPEG, or SVG) saved to your working directory.
        </p>
+<hr size="5px"/>
 </div>
 </div>
 </div>
@@ -2925,14 +2896,12 @@ https://plot.ly/~matlab_user_guide/777
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-<br/>
-<br/>
-</p>
-<h5>
+<h3 id="EXAMPLE-5:-saveplotlyfig.m">
         EXAMPLE 5: saveplotlyfig.m
-       </h5>
+        <a class="anchor-link" href="#EXAMPLE-5:-saveplotlyfig.m">
+         ¶
+        </a>
+</h3>
 </div>
 </div>
 </div>
@@ -4204,14 +4173,9 @@ https://plot.ly/~matlab_user_guide/670
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-<br/>
-<br/>
-</p>
-<h5>
+<h3>
         Example 6: saveplotlyfig.m
-       </h5>
+       </h3>
 </div>
 </div>
 </div>
@@ -4377,11 +4341,11 @@ plotlyfig =
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<h2 id="contact">
+<h1 id="-id-contact-contact">
+<id>
          CONTACT
-        </h2>
-</center>
+        </id>
+</h1>
 </div>
 </div>
 </div>
@@ -4390,94 +4354,35 @@ plotlyfig =
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr/>
 <p>
         Want to help improve this notebook? Please send us your comments/questions! Feedback concerning this notebook can be directed to
         <font color="#1d3b84">
 <strong>
-          chuck [at] plot.ly
+          chuck@plot.ly
          </strong>
 </font>
-        . You can also follow us online.
-        <br/>
-<br/>
-</p>
-<div class="image-line">
-<div class="image-cell">
-<a href="https://twitter.com/plotlygraphs">
-<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/twitter.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
-</a>
-</div>
-<div class="image-cell">
-<a href="https://www.facebook.com/Plotly">
-<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/facebook.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
-</a>
-</div>
-<div class="image-cell">
-<a href="https://plus.google.com/101741663283396748386/posts">
-<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/gplus.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
-</a>
-</div>
-<div class="image-cell">
-<a href="https://www.edmodo.com/publisher/plotly">
-<img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/ed.png" style="width: 40px; height: 40px; margin-left: 1px; margin-right: 1px"/>
-</a>
-</div>
-<p>
 </p>
 </div>
-<p>
-<br/>
-<br/>
-</p>
-<hr/>
 </div>
 </div>
-</div>
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>
-<br/>
-</p>
-<p>
-</p>
-<h4>
-</h4>
-<p>
-</p>
 <center>
-<strong>
-         •
-        </strong>
-<br/>
-<br/>
-<strong>
-         •
-        </strong>
-<br/>
-<br/>
-<strong>
-         •
-        </strong>
-<br/>
-<br/>
-<strong>
-         •
-        </strong>
-<br/>
-<br/>
+<sup>
+         [
+         <a class="nounderline" href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">
+          STYLE INSPIRED BY CAM DAVIDSON'S NB'S - THANK YOU
+         </a>
+         ]
+        </sup>
 </center>
-<br/>
-<br/>
 </div>
 </div>
 </div>
-
-
-
 </div>
 </div>
 </body>

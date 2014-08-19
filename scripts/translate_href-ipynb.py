@@ -46,21 +46,21 @@ def get_NB(file_ipynb):
         return json.load(f)
         
 # Replace 'nbviewer'-domain hrefs to plot.ly
-# TODO! add support for './' relative links!
 def replace_href(NB, domains, translate):
     for i_cell, cell in enumerate(NB['worksheets'][0]['cells']):
         if cell['cell_type']=='markdown':
             for i_line, line in enumerate(cell['source']):
-                if domains['nbviewer'] in line:
-                    _line=line.replace(domains['nbviewer'],domains['plotly'])
-                    print "[{}]".format(NAME), '... link found in cell {} / line {}'.format(i_cell,i_line)
-                    for old, new in translate.items():
-                        if old in _line:
-                            __line=_line.replace(old,new)
-                            NB['worksheets'][0]['cells'][i_cell]['source'][i_line]=__line
-                            print "[{}]".format(NAME), '... line updated to:', __line
-                            #TODO! Print raw string instead
-                            break
+                for domain in [domains['nbviewer'],'./']:
+                    if domain in line:
+                        _line=line.replace(domain,domains['plotly-ext'])
+                        print "[{}]".format(NAME), '... link found in cell {} / line {}'.format(i_cell,i_line)
+                        for old, new in translate.items():
+                            if old in _line:
+                                __line=_line.replace(old,new)
+                                NB['worksheets'][0]['cells'][i_cell]['source'][i_line]=__line
+                                print "[{}]".format(NAME), '... line updated to:', __line
+                                #TODO! Print raw string instead
+                                break
     return NB
                 
 # Replace ipynb file 

@@ -7,10 +7,11 @@ import os
 # 
 # Script that 
 # 
-# (1)  parses HTML files leaving only <body></body> template
-# (2)  strips <style></style> inside body
-# (3)  strips <script></script> inside body (which inserts MathJax)
-# (4)  strips last <pre><pre> inside body (which inserts CSS into NB)
+# (-) parses HTML files leaving only <body></body> template
+# (-) strips <h1> tag (i.e. the NB's title)
+# (-) strips <style></style> inside body
+# (-) strips <script></script> inside body (which inserts MathJax)
+# (-) strips last <pre><pre> inside body (which inserts CSS into NB)
 #
 # (*)  adds this template to the published/ tree (using ./inputs/translate.json)
 #
@@ -36,14 +37,17 @@ def get_soup(file_html):
         print "[{}]".format(NAME), 'Opening', file_html
         return BeautifulSoup(f)
 
-## (1)
-
 # Get HTML <body> 
 def get_body(soup):
     print "[{}]".format(NAME), '... grabs <body>'
     return soup.body
 
-## (2)
+# Strip title (i.e. the first h1) tag from body
+def strip_title(body):
+    H1 = body.findAll('h1')
+    H1[0].extract()
+    print "[{}]".format(NAME), '... strip first <h1> title'
+    return body
 
 # Strip style tag from body
 def strip_style(body):
@@ -51,15 +55,11 @@ def strip_style(body):
     print "[{}]".format(NAME), '... strip <style>'
     return body
 
-## (3)
-
 # Strip script tag from body
 def strip_script(body):
     body.script.extract()
     print "[{}]".format(NAME), '... strip <script> (which inserts MathJax)'
     return body
-
-## (4)
 
 # Strip last pre tag from body
 def strip_last_pre(body):
@@ -69,14 +69,7 @@ def strip_last_pre(body):
         if all(i in div['class'] for i in ['cell','border-box-sizing','code_cell','rendered']):
             div.extract()
             break
-    for div in body.findAll('div')[::-1]:
-        if all(i in div['class'] for i in ['cell','border-box-sizing','text_cell','rendered']):
-            div.extract()
-            break
-    for div in body.findAll('div')[::-1]:
-        if all(i in div['class'] for i in ['cell','border-box-sizing','text_cell','rendered']):
-            div.extract()
-            break
+    print "[{}]".format(NAME), '... strip last <pre> and parent <div> (which inserts CSS into NB)'
     return body
 
 ## (*)
@@ -90,7 +83,7 @@ def get_translate():
 
 # Get the directory tree for body.html leaf
 def get_tree(file_html, translate):
-    branch="published/"
+    branch="published/includes/"
     file_html_base = os.path.basename(file_html)
     for old, leaf in translate.items():
         old_base = os.path.basename(old).replace('.ipynb','.html')
@@ -109,11 +102,10 @@ def make_tree(tree):
 
 # Replace body.html templates
 def replace_templates(body, tree):
-    for temp, f_temp in zip([body],['body.html']):
-        path_temp = os.path.join(tree, f_temp)
-        with open(path_temp, "wb") as f:
-            print "[{}]".format(NAME), '... writes in', f_temp
-            f.write(str(temp))
+    f_body = os.path.join(tree, "body.html")
+    with open(f_body, "wb") as f:
+        print "[{}]".format(NAME), '... writes in', f_body
+        f.write(str(body))
     return
 
 # -------------------------------------------------------------------------------
@@ -126,15 +118,13 @@ def main():
     for file_html in files_html:
         soup = get_soup(file_html)
   
-        # (1)
         body = get_body(soup) 
 
-        # (2), (3), (4)
+        body = strip_title(body)
         body = strip_style(body)
         body = strip_script(body)
         body = strip_last_pre(body)
 
-        # (*)
         tree = get_tree(file_html, translate)
         make_tree(tree)
         replace_templates(body, tree)

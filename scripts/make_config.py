@@ -38,8 +38,8 @@ def get_config(chapter):
     #
 
     # Set fields
-    name = titled(base.replace(' tutorial',''))
-    title = "MATLAB User Guide | {} | plotly".format(titled(base))
+    name = base.capitalize().replace(' tutorial','')
+    title = "{} | MATLAB User Guide | plotly".format(titled(base))
     descrip = (
         "A tutorial on how to make beautiful {} "
         "with plotly and MATLAB."
@@ -51,9 +51,17 @@ def get_config(chapter):
         title = "MATLAB User Guide | plotly"
         descrip = "A User Guide for plotly and its MATLAB API Library"
     if chapter == 'introduction':
+        title = "Introduction of Plotly and its MATLAB API Library"
         descrip = "An introduction to plotly and its MATLAB API Library"
     if chapter == 'overview':
+        title = "Overview of Plotly and its MATLAB API Library"
         descrip = "An overview of plotly and its MATLAB API Library"
+    if chapter == 'streaming-tutorial': 
+        name = "Streaming plots"
+        title = "Overview of Streaming Plots | MATLAB User Guide | plotly" 
+        descrip = (
+            "How to graph data in real-time with plotly and MATLAB."
+        )
 
     # Output
     config = dict(
@@ -65,11 +73,12 @@ def get_config(chapter):
 
 # Replace config.json 
 def replace_config(config, chapter):
-    path = os.path.join("./published/", chapter)
+    path = os.path.join("./published/includes/", chapter)
     f_config = os.path.join(path,"config.json")
     with open(f_config, "w") as f:
         print "[{}]".format(NAME), '... writes in', f_config
         json.dump(config, f, indent=4)
+        f.write("\n")
     return
 
 # -------------------------------------------------------------------------------
