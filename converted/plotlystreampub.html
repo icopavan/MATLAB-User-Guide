@@ -1751,7 +1751,7 @@ div#notebook {
     <div class="cell border-box-sizing code_cell rendered">
      <div class="input">
       <div class="prompt input_prompt">
-       In [3]:
+       In [19]:
       </div>
       <div class="inner_cell">
        <div class="input_area">
@@ -1766,10 +1766,10 @@ div#notebook {
       <div class="output">
        <div class="output_area">
         <div class="prompt output_prompt">
-         Out[3]:
+         Out[19]:
         </div>
         <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="650" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/846/800/650" width="800">
+         <iframe frameborder="0" height="600" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/846/750/600" width="750">
          </iframe>
         </div>
        </div>
@@ -1826,8 +1826,7 @@ div#notebook {
         <div class="prompt">
         </div>
         <div class="output_subarea output_stream output_stdout output_text">
-         <pre>
-Starting MATLAB on ZMQ socket ipc:///tmp/pymatbridge
+         <pre>Starting MATLAB on ZMQ socket ipc:///tmp/pymatbridge
 Send 'exit' command to kill the server
 .................MATLAB started and connected!
 
@@ -1953,9 +1952,7 @@ Send 'exit' command to kill the server
         <div class="prompt">
         </div>
         <div class="output_text output_subarea ">
-         <pre>
-
-URL_OF_PLOT =
+         <pre>URL_OF_PLOT =
 
 https://plot.ly/~matlab_user_guide/849
 
@@ -2069,6 +2066,7 @@ https://plot.ly/~matlab_user_guide/849
 <span class="n">end</span>
 
 <span class="o">%----</span><span class="n">close</span> <span class="n">the</span> <span class="n">stream</span><span class="o">----%</span> 
+
 <span class="n">ps</span><span class="o">.</span><span class="n">close</span><span class="p">();</span> 
 </pre>
         </div>
@@ -2081,9 +2079,7 @@ https://plot.ly/~matlab_user_guide/849
         <div class="prompt">
         </div>
         <div class="output_text output_subarea ">
-         <pre>
-
-[Connection Successful]
+         <pre>[Connection Successful]
 
 
 </pre>
@@ -2382,67 +2378,74 @@ https://plot.ly/~matlab_user_guide/849
          </strong>
         </font>
        </p>
+       <font color="#1d3b84">
+       </font>
       </div>
+      <font color="#1d3b84">
+      </font>
      </div>
+     <font color="#1d3b84">
+     </font>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h5 id="EMBED-PLOTLY-FIGURES-IN-YOUR-NB">
-        EMBED PLOTLY FIGURES IN YOUR NB
-        <a class="anchor-link" href="#EMBED-PLOTLY-FIGURES-IN-YOUR-NB">
-         ¶
-        </a>
-       </h5>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
+    <font color="#1d3b84">
+     <div class="cell border-box-sizing text_cell rendered">
       <div class="prompt input_prompt">
-       In [1]:
       </div>
       <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+       <div class="text_cell_render border-box-sizing rendered_html">
+        <h5 id="EMBED-PLOTLY-FIGURES-IN-YOUR-NB">
+         EMBED PLOTLY FIGURES IN YOUR NB
+         <a class="anchor-link" href="#EMBED-PLOTLY-FIGURES-IN-YOUR-NB">
+          ¶
+         </a>
+        </h5>
+       </div>
+      </div>
+     </div>
+     <div class="cell border-box-sizing code_cell rendered">
+      <div class="input">
+       <div class="prompt input_prompt">
+        In [18]:
+       </div>
+       <div class="inner_cell">
+        <div class="input_area">
+         <div class="highlight">
+          <pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
-<span class="k">def</span> <span class="nf">PLOTLY_FIGURE</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">650</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">PLOTLY_FIGURE</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="s">'&lt;iframe height="</span><span class="si">%s</span><span class="s">" id="igraph" frameborder = 0 seamless="seamless" scrolling="no" src="</span><span class="si">%s</span><span class="s">" width="</span><span class="si">%s</span><span class="s">"&gt;&lt;/iframe&gt;'</span> <span class="o">%</span>\
     <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s">"/"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,[</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">])),</span> <span class="n">width</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre>
+         </div>
         </div>
        </div>
       </div>
      </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [1]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="c"># CSS styling within IPython notebook</span>
+     <div class="cell border-box-sizing code_cell rendered">
+      <div class="input">
+       <div class="prompt input_prompt">
+        In [3]:
+       </div>
+       <div class="inner_cell">
+        <div class="input_area">
+         <div class="highlight">
+          <pre><span class="c"># CSS styling within IPython notebook</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">'./css/custom.css'</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
 </pre>
+         </div>
         </div>
        </div>
       </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_html rendered_html output_subarea ">
-         <style>
-          div.cell{
+      <div class="output_wrapper">
+       <div class="output">
+        <div class="output_area">
+         <div class="prompt">
+         </div>
+         <div class="output_html rendered_html output_subarea ">
+          <style>
+           div.cell{
         width: 850px;
         margin-left: 10% !important;
         margin-right: auto;
@@ -2637,9 +2640,9 @@ https://plot.ly/~matlab_user_guide/849
       }
    /* element.style {
     } */
-         </style>
-         <script>
-          MathJax.Hub.Config({
+          </style>
+          <script>
+           MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"]
                            },
@@ -2652,28 +2655,33 @@ https://plot.ly/~matlab_user_guide/849
                     styles: {".MathJax_Display": {"margin": 4}}
                 }
         });
-         </script>
+          </script>
+         </div>
         </div>
        </div>
       </div>
      </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <sup>
-         <a class="nounderlineblack" href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">
-          STYLE INSPIRED BY CAM DAVIDSON'S NB'S - THANK YOU
-         </a>
-        </sup>
-       </center>
+     <div class="cell border-box-sizing text_cell rendered">
+      <div class="prompt input_prompt">
+      </div>
+      <div class="inner_cell">
+       <div class="text_cell_render border-box-sizing rendered_html">
+        <center>
+         <sup>
+          <a class="nounderlineblack" href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">
+           STYLE INSPIRED BY CAM DAVIDSON'S NB'S - THANK YOU
+          </a>
+         </sup>
+        </center>
+       </div>
       </div>
      </div>
-    </div>
+    </font>
    </div>
+   <font color="#1d3b84">
+   </font>
   </div>
+  <font color="#1d3b84">
+  </font>
  </body>
 </html>
