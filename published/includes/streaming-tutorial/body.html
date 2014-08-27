@@ -6,7 +6,13 @@
      </div>
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
-       
+       <p>
+        Real time signal visualization
+        <br/>
+        <strong>
+         Streaming to Plotly from
+        </strong>
+       </p>
       </div>
      </div>
     </div>
@@ -197,7 +203,7 @@ Send 'exit' command to kill the server
        <div class="input_area">
         <div class="highlight">
          <pre><span class="o">%%</span><span class="k">matlab</span>
-<span class="o">%</span><span class="k">plotlysetup</span><span class="p">(</span><span class="s">'username'</span><span class="p">,</span><span class="s">'api_key'</span><span class="p">);</span> <span class="o">%</span><span class="k">uncomment</span> <span class="n">this</span> <span class="n">line</span> <span class="ow">and</span> <span class="n">fill</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">require</span> <span class="n">fields</span>
+<span class="o">%</span><span class="k">plotlysetup</span><span class="p">(</span><span class="s">'username'</span><span class="p">,</span><span class="s">'api_key'</span><span class="p">,</span><span class="s">'stream_ids'</span><span class="p">,{</span><span class="s">'stream_token1'</span><span class="p">,</span><span class="o">...</span><span class="p">});</span>
 </pre>
         </div>
        </div>
@@ -210,7 +216,7 @@ Send 'exit' command to kill the server
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
        <p>
-        Both your ' username ' and ' api_key ' are initialized once you
+        Uncomment the above line and fill in your credentials. Your 'username', 'api_key' and 'stream_tokens' are initialized once you
         <a class="nounderline" href="https://plot.ly">
          MAKE A PLOTLY ACCOUNT
         </a>
@@ -293,13 +299,6 @@ https://plot.ly/~matlab_user_guide/849
      </div>
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Your stream tokens are found online once you
-        <a class="nounderline" href="https://plot.ly">
-         SETUP YOUR ACCOUNT
-        </a>
-        !
-       </p>
        <p>
         <br/>
         <br/>
@@ -679,14 +678,7 @@ https://plot.ly/~matlab_user_guide/849
      </div>
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
-       <h1 id="CONTACT">
-        <span id="contacts">
-         CONTACT
-        </span>
-        <a class="anchor-link" href="#CONTACT">
-         ¶
-        </a>
-       </h1>
+       
       </div>
      </div>
     </div>
