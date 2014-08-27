@@ -250,7 +250,7 @@ Send 'exit' command to kill the server
          <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%----</span><span class="n">STORED</span> <span class="n">STREAMING</span> <span class="n">CREDENTIALS</span><span class="o">----%</span>
 <span class="n">my_credentials</span> <span class="o">=</span> <span class="n">loadplotlycredentials</span><span class="p">;</span> 
-<span class="n">my_stream_token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_key</span><span class="p">{</span><span class="n">end</span><span class="p">};</span>
+<span class="n">my_stream_token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_ids</span><span class="p">{</span><span class="n">end</span><span class="p">};</span>
 
 <span class="o">%----</span><span class="n">SETUP</span><span class="o">-----%</span>
 
@@ -294,9 +294,9 @@ https://plot.ly/~matlab_user_guide/849
      <div class="inner_cell">
       <div class="text_cell_render border-box-sizing rendered_html">
        <p>
-        Your stream token is found online once you have your
+        Your stream tokens are found online once you
         <a class="nounderline" href="https://plot.ly">
-         VERY OWN ACCOUNT
+         SETUP YOUR ACCOUNT
         </a>
         !
        </p>
@@ -489,7 +489,7 @@ https://plot.ly/~matlab_user_guide/849
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="s">'circle'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_key</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">4</span><span class="p">};</span>
+<span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_ids</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">4</span><span class="p">};</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">maxpoints</span> <span class="o">=</span> <span class="n">maxpoints</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">autorange</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">'$s_1$'</span><span class="p">;</span>
@@ -507,7 +507,7 @@ https://plot.ly/~matlab_user_guide/849
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">marker</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_key</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">3</span><span class="p">};</span>
+<span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_ids</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">3</span><span class="p">};</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">maxpoints</span> <span class="o">=</span> <span class="n">maxpoints</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">'$s_2$'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">2</span><span class="p">}</span><span class="o">.</span><span class="n">xaxis</span> <span class="o">=</span> <span class="s">'x1'</span><span class="p">;</span>
@@ -518,7 +518,7 @@ https://plot.ly/~matlab_user_guide/849
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="s">'lines'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_key</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">2</span><span class="p">};</span>
+<span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_ids</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">2</span><span class="p">};</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s">'rgba(0,0,0,1)'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">3</span><span class="p">}</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">'$|FFT(s_1)|$'</span><span class="p">;</span>
@@ -532,7 +532,7 @@ https://plot.ly/~matlab_user_guide/849
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">mode</span> <span class="o">=</span> <span class="s">'lines'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="p">[];</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="p">[];</span>
-<span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_key</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>
+<span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">stream</span><span class="o">.</span><span class="n">token</span> <span class="o">=</span> <span class="n">my_credentials</span><span class="o">.</span><span class="n">stream_ids</span><span class="p">{</span><span class="n">end</span><span class="o">-</span><span class="mi">1</span><span class="p">};</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s">'rgba(0,0,0,1)'</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">line</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="n">data</span><span class="p">{</span><span class="mi">4</span><span class="p">}</span><span class="o">.</span><span class="n">fillcolor</span> <span class="o">=</span> <span class="s">'rgba(0,200,200,0.5)'</span><span class="p">;</span>
