@@ -1,480 +1,479 @@
 <body>
-  <div class="border-box-sizing" id="notebook" tabindex="-1">
-   <div class="container" id="notebook-container">
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       
-      </div>
+ <div class="border-box-sizing" id="notebook" tabindex="-1">
+  <div class="container" id="notebook-container">
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <blockquote>
-        <p>
-         WELCOME! This Notebook is designed to demonstrate the use of Plotly's MATLAB API and to showcase three
-         <strong>
-          <font color="red">
-           *NEW*
-          </font>
-         </strong>
-         API functions.
-        </p>
-       </blockquote>
-       <center>
-        <a class="nounderlineblack" href="#f2p">
-         fig2plotly.m
-        </a>
-        <strong>
-         •
-        </strong>
-        <a class="nounderlineblack" href="#gpf">
-         getplotlyfig.m
-        </a>
-        <strong>
-         •
-        </strong>
-        <a class="nounderlineblack" href="#spf">
-         saveplotlyfig.m
-        </a>
-       </center>
-      </div>
-     </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="New-to-Plotly?">
-        New to Plotly?
-        <a class="anchor-link" href="#New-to-Plotly?">
-         ¶
-        </a>
-       </h3>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <blockquote>
        <p>
-        <strong>
-         Plotly
-        </strong>
-        is a browser-based
-        <strong>
-         data analysis and visualization tool
-        </strong>
-        that lets you and your team
-        <strong>
-         make
-        </strong>
-        and
-        <strong>
-         share
-        </strong>
-        beautiful,
-        <strong>
-         interactive
-        </strong>
-        graphs,
-        <strong>
-         3D
-        </strong>
-        graphs, and
-        <strong>
-         streaming
-        </strong>
-        graphs using MATLAB, Python, IPython, matplotlib, R, ggplot2, and Excel.
-       </p>
-       <p>
-        This API allows MATLAB users to generate Plotly graphs from the desktop MATLAB environment: turning MATLAB figures into
-        <strong>
-         interactive, shareable, collaborative
-        </strong>
-        projects.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="Plotly-MATLAB-API-Workflow:">
-        Plotly MATLAB API Workflow:
-        <a class="anchor-link" href="#Plotly-MATLAB-API-Workflow:">
-         ¶
-        </a>
-       </h3>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <ul>
-        <li>
-         Collect or generate some data in your MATLAB environment
-        </li>
-        <li>
-         Send data to your Plotly account through this Plotly MATLAB API
-        </li>
-        <li>
-         View interactive graph in your browser
-        </li>
-        <li>
-         Style graph in the Plotly GUI
-        </li>
-        <li>
-         Share graph by URL shortlinks, Facebook, or Twitter
-        </li>
-        <li>
-         <p>
-          Export to PNG, PDF, EPS, SVG
-         </p>
-        </li>
-        <li>
-         <p>
-          <font color="red">
-           <strong>
-            *NEW*
-           </strong>
-          </font>
-          Plot your MATLAB figure objects with Plotly using
-          <strong>
-           fig2plotly.m
-          </strong>
-         </p>
-        </li>
-        <li>
-         <font color="red">
-          <strong>
-           *NEW*
-          </strong>
-         </font>
-         Get data, style, and layout from the plots stored online
-         <strong>
-          getplotlyfig.m
-         </strong>
-        </li>
-        <li>
-         <font color="red">
-          <strong>
-           *NEW*
-          </strong>
-         </font>
-         Save your Plotly figures as an image in MATLAB using
-         <strong>
-          saveplotlyfig.m
-         </strong>
-         <br/>
-         <br/>
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="Initial-Setup:">
-        Initial Setup:
-        <a class="anchor-link" href="#Initial-Setup:">
-         ¶
-        </a>
-       </h3>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        The Plotly MATLAB API has been embedded into our MATLAB toolboxes and our Plotly credentials have been saved using
-        <strong>
-         plotlysetup.m
-        </strong>
-        . In order to start using the Plotly MATLAB API all we have to do now is start MATLAB!  More information regarding installation / setting up the Plotly MATLAB API can be found on the
-        <a class="nounderline" href="/matlab/getting-started">
-         online documentation
-        </a>
-        .
-       </p>
-       <p>
-        <strong>
-         NOTE:
-        </strong>
-        Throughout this notebook we will be using the super awesome
-        <a class="nounderline" href="https://pypi.python.org/pypi/pymatbridge/0.1/">
-         pymatbridge
-        </a>
-        package to communicate with MATLAB from Python. Everything that comes below the
-        <strong>
-         %%matlab
-        </strong>
-        decorator will now be read as MATLAB code. To use the MATLAB API on your own machine, simply open the MATLAB application as you normally would.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h5 id="&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
-        &gt;&gt; OPEN YOUR MATLAB ENVIRONMENT!
-        <a class="anchor-link" href="#&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
-         ¶
-        </a>
-       </h5>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [1]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%</span><span class="k">load_ext</span> <span class="n">pymatbridge</span>
-</pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_subarea output_stream output_stdout output_text">
-         <pre>Starting MATLAB on ZMQ socket ipc:///tmp/pymatbridge
-Send 'exit' command to kill the server
-......................MATLAB started and connected!
-
-</pre>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        <br/>
-       </p>
-       <center>
-        <h1 id="f2p">
-         fig2plotly.m
-        </h1>
-       </center>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <hr/>
-       <center>
-        <h3>
-         Plot a MATLAB figure object with Plotly
-        </h3>
-       </center>
-       <hr/>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
+        WELCOME! This Notebook is designed to demonstrate the use of Plotly's MATLAB API and to showcase three
         <strong>
          <font color="red">
           *NEW*
          </font>
         </strong>
-        to the Plotly MATLAB API is the
-        <strong>
-         fig2plotly.m
-        </strong>
-        function - the future of the MATLAB API.
-        <strong>
-         fig2plotly.m
-        </strong>
-        allows you to take your MATLAB generated figures and automatically create a Plotly plot, taking care of the conversion from the MATLAB figure object structure to Plotly syntax.
+        API functions.
        </p>
-       <hr size="5px"/>
-       <p>
-        <strong>
-         [INPUT]:
-        </strong>
-       </p>
-       <p>
-        resp = fig2plotly()
-       </p>
-       <p>
-        resp = fig2plotly(f)
-       </p>
-       <p>
-        resp = fig2plotly(gcf)
-       </p>
-       <p>
-        resp = fig2plotly(f,'property',value, ... )
-       </p>
-       <p>
-        resp = fig2plotly(gcf,'property',value, ... )
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [WHERE]:
-        </strong>
-       </p>
-       <p>
-        gcf - root figure object handle [double].
-       </p>
-       <p>
-        f - root figure object [struct] &gt;&gt; f = get(gcf)
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [PROPERTIES]:
-        </strong>
-       </p>
-       <p>
-        'name' - name of the plot [string]['untitled']
-       </p>
-       <p>
-        'strip' - use plotly default styling [boolean][0]
-       </p>
-       <p>
-        'open' - opens a browser with plot result [boolean][1]
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [OUTPUT]:
-        </strong>
-       </p>
-       <p>
-        resp - results info of the plot [struct]
-       </p>
-       <p>
-        resp.[url,warning,message,filename,error]
-       </p>
-       <hr size="5px"/>
-       <p>
-        If you are properly signed up / in, the
-        <strong>
-         url
-        </strong>
-        field of the structure array,
-        <strong>
-         resp
-        </strong>
-        , will contain the address (associated with your Plotly account) of your newly created Plotly plot. The
-        <strong>
-         filename
-        </strong>
-        field will return a string of your chosen file name, or 'untitled' by default. The
-        <strong>
-         warning
-        </strong>
-        ,
-        <strong>
-         message
-        </strong>
-        , and
-        <strong>
-         error
-        </strong>
-        fields will contain a string if anything went wrong or if there are updates for the Plotly MATLAB API.
-       </p>
-      </div>
+      </blockquote>
+      <center>
+       <a class="nounderlineblack" href="#f2p">
+        fig2plotly.m
+       </a>
+       <strong>
+        •
+       </strong>
+       <a class="nounderlineblack" href="#gpf">
+        getplotlyfig.m
+       </a>
+       <strong>
+        •
+       </strong>
+       <a class="nounderlineblack" href="#spf">
+        saveplotlyfig.m
+       </a>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="New-to-Plotly?">
+       New to Plotly?
+       <a class="anchor-link" href="#New-to-Plotly?">
+        ¶
+       </a>
+      </h3>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <strong>
+        Plotly
+       </strong>
+       is a browser-based
+       <strong>
+        data analysis and visualization tool
+       </strong>
+       that lets you and your team
+       <strong>
+        make
+       </strong>
+       and
+       <strong>
+        share
+       </strong>
+       beautiful,
+       <strong>
+        interactive
+       </strong>
+       graphs,
+       <strong>
+        3D
+       </strong>
+       graphs, and
+       <strong>
+        streaming
+       </strong>
+       graphs using MATLAB, Python, IPython, matplotlib, R, ggplot2, and Excel.
+      </p>
+      <p>
+       This API allows MATLAB users to generate Plotly graphs from the desktop MATLAB environment: turning MATLAB figures into
+       <strong>
+        interactive, shareable, collaborative
+       </strong>
+       projects.
+      </p>
      </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="-p-id-ex1-example-1-fig2plotly-m-p-">
-        <p id="ex1">
-         Example 1: fig2plotly.m
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="Plotly-MATLAB-API-Workflow:">
+       Plotly MATLAB API Workflow:
+       <a class="anchor-link" href="#Plotly-MATLAB-API-Workflow:">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <ul>
+       <li>
+        Collect or generate some data in your MATLAB environment
+       </li>
+       <li>
+        Send data to your Plotly account through this Plotly MATLAB API
+       </li>
+       <li>
+        View interactive graph in your browser
+       </li>
+       <li>
+        Style graph in the Plotly GUI
+       </li>
+       <li>
+        Share graph by URL shortlinks, Facebook, or Twitter
+       </li>
+       <li>
+        <p>
+         Export to PNG, PDF, EPS, SVG
         </p>
-       </h3>
-      </div>
+       </li>
+       <li>
+        <p>
+         <font color="red">
+          <strong>
+           *NEW*
+          </strong>
+         </font>
+         Plot your MATLAB figure objects with Plotly using
+         <strong>
+          fig2plotly.m
+         </strong>
+        </p>
+       </li>
+       <li>
+        <font color="red">
+         <strong>
+          *NEW*
+         </strong>
+        </font>
+        Get data, style, and layout from the plots stored online
+        <strong>
+         getplotlyfig.m
+        </strong>
+       </li>
+       <li>
+        <font color="red">
+         <strong>
+          *NEW*
+         </strong>
+        </font>
+        Save your Plotly figures as an image in MATLAB using
+        <strong>
+         saveplotlyfig.m
+        </strong>
+        <br/>
+        <br/>
+       </li>
+      </ul>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="Initial-Setup:">
+       Initial Setup:
+       <a class="anchor-link" href="#Initial-Setup:">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The Plotly MATLAB API has been embedded into our MATLAB toolboxes and our Plotly credentials have been saved using
+       <strong>
+        plotlysetup.m
+       </strong>
+       . In order to start using the Plotly MATLAB API all we have to do now is start MATLAB!  More information regarding installation / setting up the Plotly MATLAB API can be found on the
+       <a class="nounderline" href="/matlab/getting-started">
+        online documentation
+       </a>
+       .
+      </p>
+      <p>
+       <strong>
+        NOTE:
+       </strong>
+       Throughout this notebook we will be using the super awesome
+       <a class="nounderline" href="https://pypi.python.org/pypi/pymatbridge/0.1/">
+        pymatbridge
+       </a>
+       package to communicate with MATLAB from Python. Everything that comes below the
+       <strong>
+        %%matlab
+       </strong>
+       decorator will now be read as MATLAB code. To use the MATLAB API on your own machine, simply open the MATLAB application as you normally would.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h5 id="&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
+       &gt;&gt; OPEN YOUR MATLAB ENVIRONMENT!
+       <a class="anchor-link" href="#&gt;&gt;-OPEN-YOUR-MATLAB-ENVIRONMENT!">
+        ¶
+       </a>
+      </h5>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [1]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        The best way to grasp the
-        <strong>
-         fig2plotly.m
-        </strong>
-        useage is to see it in action! For our first example, let's take a look at a plot featured in the Mathworks plot gallery.
-       </p>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%</span><span class="k">load_ext</span> <span class="n">pymatbridge</span>
+</pre>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [2]:
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_subarea output_stream output_stdout output_text">
+        <pre>Starting MATLAB on ZMQ socket ipc:///tmp/pymatbridge
+Send 'exit' command to kill the server
+......................MATLAB started and connected!
+
+</pre>
+       </div>
       </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       <br/>
+      </p>
+      <center>
+       <h1 id="f2p">
+        fig2plotly.m
+       </h1>
+      </center>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <center>
+       <h3>
+        Plot a MATLAB figure object with Plotly
+       </h3>
+      </center>
+      <hr/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <strong>
+        <font color="red">
+         *NEW*
+        </font>
+       </strong>
+       to the Plotly MATLAB API is the
+       <strong>
+        fig2plotly.m
+       </strong>
+       function - the future of the MATLAB API.
+       <strong>
+        fig2plotly.m
+       </strong>
+       allows you to take your MATLAB generated figures and automatically create a Plotly plot, taking care of the conversion from the MATLAB figure object structure to Plotly syntax.
+      </p>
+      <hr size="5px"/>
+      <p>
+       <strong>
+        [INPUT]:
+       </strong>
+      </p>
+      <p>
+       resp = fig2plotly()
+      </p>
+      <p>
+       resp = fig2plotly(f)
+      </p>
+      <p>
+       resp = fig2plotly(gcf)
+      </p>
+      <p>
+       resp = fig2plotly(f,'property',value, ... )
+      </p>
+      <p>
+       resp = fig2plotly(gcf,'property',value, ... )
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [WHERE]:
+       </strong>
+      </p>
+      <p>
+       gcf - root figure object handle [double].
+      </p>
+      <p>
+       f - root figure object [struct] &gt;&gt; f = get(gcf)
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [PROPERTIES]:
+       </strong>
+      </p>
+      <p>
+       'name' - name of the plot [string]['untitled']
+      </p>
+      <p>
+       'strip' - use plotly default styling [boolean][0]
+      </p>
+      <p>
+       'open' - opens a browser with plot result [boolean][1]
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [OUTPUT]:
+       </strong>
+      </p>
+      <p>
+       resp - results info of the plot [struct]
+      </p>
+      <p>
+       resp.[url,warning,message,filename,error]
+      </p>
+      <hr size="5px"/>
+      <p>
+       If you are properly signed up / in, the
+       <strong>
+        url
+       </strong>
+       field of the structure array,
+       <strong>
+        resp
+       </strong>
+       , will contain the address (associated with your Plotly account) of your newly created Plotly plot. The
+       <strong>
+        filename
+       </strong>
+       field will return a string of your chosen file name, or 'untitled' by default. The
+       <strong>
+        warning
+       </strong>
+       ,
+       <strong>
+        message
+       </strong>
+       , and
+       <strong>
+        error
+       </strong>
+       fields will contain a string if anything went wrong or if there are updates for the Plotly MATLAB API.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="-p-id-ex1-example-1-fig2plotly-m-p-">
+      </h3>
+      <p id="ex1">
+       Example 1: fig2plotly.m
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The best way to grasp the
+       <strong>
+        fig2plotly.m
+       </strong>
+       useage is to see it in action! For our first example, let's take a look at a plot featured in the Mathworks plot gallery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [2]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>            <span class="n">FROM</span> <span class="n">MATLAB</span> <span class="n">PLOT</span> <span class="n">GALLERY</span>              <span class="o">%</span>
 <span class="o">%</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">mathworks</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">discovery</span><span class="o">/</span><span class="n">gallery</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span>
@@ -499,17 +498,17 @@ Send 'exit' command to kill the server
 
 <span class="n">resp</span> <span class="o">=</span> <span class="n">fig2plotly</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span><span class="s">'filename'</span><span class="p">,</span><span class="s">'matlab_overview_1'</span><span class="p">,</span><span class="s">'strip'</span><span class="p">,</span><span class="n">false</span><span class="p">);</span> <span class="o">%</span> <span class="o">&lt;----</span> <span class="n">ONE</span> <span class="n">LINE</span> <span class="n">OF</span> <span class="n">PLOTLY</span> <span class="n">CODE</span><span class="err">!</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_png output_subarea ">
-         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
 B3RJTUUH3ggYEwQnnjuOCAAAACJ0RVh0Q3JlYXRpb24gVGltZQAyNC1BdWctMjAxNCAxNTowNDoz
 OJVBZJIAAAAkdEVYdFNvZnR3YXJlAE1BVExBQiwgVGhlIE1hdGh3b3JrcywgSW5jLrrEUs8AACAA
 SURBVHic7N3ZkqM4uwVQ+8T//q/sc0GnC4MAISTQsFZ0dFRl2UDaTJtPw/vz+bwAAAAYz/89vQEA
@@ -912,342 +911,342 @@ hBIIAQAAQgmEAAAAoQRCAACAUAIhAABAKIEQAAAglEAIAAAQSiAEAAAIJRACAACEEggBAABCCYQA
 AAChBEIAAIBQAiEAAEAogRAAACCUQAgAABBKIAQAAAglEAIAAIQSCAEAAEIJhAAAAKH+AdL4ANSM
 pvwyAAAAAElFTkSuQmCC
 "/>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The above plot is the ouptut from calling the
+       <strong>
+        scatter.m
+       </strong>
+       and
+       <strong>
+        line.m
+       </strong>
+       functions inherent in MATLAB. Using the
+       <strong>
+        fig2plotly.m
+       </strong>
+       function, we are able to extract the relevant data from the MATLAB figure object and throw the output over to our Plotly account! The returned response variable,
+       <strong>
+        resp
+       </strong>
+       , is a structure array which contains a
+       <strong>
+        url
+       </strong>
+       field with the address of our plot.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [3]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        The above plot is the ouptut from calling the
-        <strong>
-         scatter.m
-        </strong>
-        and
-        <strong>
-         line.m
-        </strong>
-        functions inherent in MATLAB. Using the
-        <strong>
-         fig2plotly.m
-        </strong>
-        function, we are able to extract the relevant data from the MATLAB figure object and throw the output over to our Plotly account! The returned response variable,
-        <strong>
-         resp
-        </strong>
-        , is a structure array which contains a
-        <strong>
-         url
-        </strong>
-        field with the address of our plot.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [3]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">resp</span><span class="o">.</span><span class="n">url</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans =
 
 https://plot.ly/~matlab_user_guide/661
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Let's have a look at the newly produced line and scatter plot in Plotly!
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's have a look at the newly produced line and scatter plot in Plotly!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <strong>
-         NOTE:
-        </strong>
-        The following function can be used to embed your Plotly plots within your own NB.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <strong>
+        NOTE:
+       </strong>
+       The following function can be used to embed your Plotly plots within your own NB.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [4]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [4]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="k">def</span> <span class="nf">show_plot</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">750</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">550</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="s">'&lt;iframe height="</span><span class="si">%s</span><span class="s">" id="igraph" scrolling="no" frameborder = 0 seamless="seamless" src="</span><span class="si">%s</span><span class="s">" width="</span><span class="si">%s</span><span class="s">"&gt;&lt;/iframe&gt;'</span> <span class="o">%</span>\
     <span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="s">"/"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,[</span><span class="n">url</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">])),</span> <span class="n">width</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [5]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/661'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [5]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/661'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[5]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/661/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Nice! We can see how the
-        <strong>
-         fig2plotly.m
-        </strong>
-        function is able to parse all the relevant information for the MATLAB figure object and generate an awesome looking plot, the data for which is now
-        <strong>
-         stored
-        </strong>
-        on the cloud! This means you'll never have to worry about where your data is saved on your computer and you can
-        <strong>
-         share
-        </strong>
-        your newly created plot by simply embedding the link within your website or throwing it over to Facebook or Twitter!
-       </p>
-       <p>
-        Another great thing about Plotly is the
-        <strong>
-         interactivity
-        </strong>
-        of the graphs. Try scrolling over the newly created plot to view the labelled data. Holding shift while clicking and dragging allows you to pan. Click and drag to zoom and double click to revert back to the original view.
-       </p>
-       <p>
-        We can also now take advantage of the interactive
-        <strong>
-         web app!
-        </strong>
-        You can view/edit all our newly created plots on your online account. All the data associated with the plot has been conveniently stored in a grid that can be accessed by clicking on the the "Data" tab on the right (image below).
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[5]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/661/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/workspace.png" style="width: 850px; height: 500px; margin-left: auto; margin-right: auto"/>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice! We can see how the
+       <strong>
+        fig2plotly.m
+       </strong>
+       function is able to parse all the relevant information for the MATLAB figure object and generate an awesome looking plot, the data for which is now
+       <strong>
+        stored
+       </strong>
+       on the cloud! This means you'll never have to worry about where your data is saved on your computer and you can
+       <strong>
+        share
+       </strong>
+       your newly created plot by simply embedding the link within your website or throwing it over to Facebook or Twitter!
+      </p>
+      <p>
+       Another great thing about Plotly is the
+       <strong>
+        interactivity
+       </strong>
+       of the graphs. Try scrolling over the newly created plot to view the labelled data. Holding shift while clicking and dragging allows you to pan. Click and drag to zoom and double click to revert back to the original view.
+      </p>
+      <p>
+       We can also now take advantage of the interactive
+       <strong>
+        web app!
+       </strong>
+       You can view/edit all our newly created plots on your online account. All the data associated with the plot has been conveniently stored in a grid that can be accessed by clicking on the the "Data" tab on the right (image below).
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        By clicking on the "Edit graph" link at the top (image above), we are able to access the main web GUI. This will allow us to tweak and experiment with plotting layout and style without having to write lines upon lines of code. Below is a screen shot of the Plotly web app.
-        <br/>
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/workspace.png" style="width: 850px; height: 500px; margin-left: auto; margin-right: auto"/>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/webapp.png" style="width: 850px; height: 500px; margin-left: auto;margin-right: auto"/>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       By clicking on the "Edit graph" link at the top (image above), we are able to access the main web GUI. This will allow us to tweak and experiment with plotting layout and style without having to write lines upon lines of code. Below is a screen shot of the Plotly web app.
+       <br/>
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        There are also many style/layout themes to choose from and you can even save your own themes to apply to your graphs. Have a go at changing the syle and layout to suit your personal preferences. Here is one that we made:
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/webapp.png" style="width: 850px; height: 500px; margin-left: auto;margin-right: auto"/>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [6]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/662'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       There are also many style/layout themes to choose from and you can even save your own themes to apply to your graphs. Have a go at changing the syle and layout to suit your personal preferences. Here is one that we made:
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [6]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/662'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[6]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/662/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[6]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/662/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Once you are finished you can quickly share by hitting "Share". This will open a "Sharing settings" window (image below) which will allow you to modify the plots privacy settings and add a collaborator to be able to edit the plot you have created!
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/sharemodal.png" style="width: 850px; height: 600px; margin-left: auto;margin-right: auto"/>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Once you are finished you can quickly share by hitting "Share". This will open a "Sharing settings" window (image below) which will allow you to modify the plots privacy settings and add a collaborator to be able to edit the plot you have created!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        You can also click on the social media icons to quickly throw your plot over to Facebook or Twitter to share it with the world!
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <img src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/sharemodal.png" style="width: 850px; height: 600px; margin-left: auto;margin-right: auto"/>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="-br-br-br-example-2-fig2plotly-m">
-        <br/>
-        <br/>
-        <br/>
-        Example 2: fig2plotly.m
-       </h3>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       You can also click on the social media icons to quickly throw your plot over to Facebook or Twitter to share it with the world!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Lets have a look at how
-        <strong>
-         fig2plotly.m
-        </strong>
-        is able to handle more difficult plot layouts, such as multiple subplots of varying size.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="-br-br-br-example-2-fig2plotly-m">
+       <br/>
+       <br/>
+       <br/>
+       Example 2: fig2plotly.m
+      </h3>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [7]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Lets have a look at how
+       <strong>
+        fig2plotly.m
+       </strong>
+       is able to handle more difficult plot layouts, such as multiple subplots of varying size.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [7]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>            <span class="n">FROM</span> <span class="n">MATLAB</span> <span class="n">PLOT</span> <span class="n">GALLERY</span>              <span class="o">%</span>
 <span class="o">%</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">mathworks</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">discovery</span><span class="o">/</span><span class="n">gallery</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span>
@@ -1283,17 +1282,17 @@ https://plot.ly/~matlab_user_guide/661
 
 <span class="n">resp</span> <span class="o">=</span> <span class="n">fig2plotly</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span><span class="s">'filename'</span><span class="p">,</span><span class="s">'matlab_overview_3'</span><span class="p">);</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_png output_subarea ">
-         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
 B3RJTUUH3ggYEwU4CiiyvAAAACJ0RVh0Q3JlYXRpb24gVGltZQAyNC1BdWctMjAxNCAxNTowNTo1
 NpwfiXYAAAAkdEVYdFNvZnR3YXJlAE1BVExBQiwgVGhlIE1hdGh3b3JrcywgSW5jLrrEUs8AACAA
 SURBVHic7d3blpu6tgVQdFr+/5c5D17xdjBgCQRImr0/JZUqG8+oEANdSPM8TwAAAMTzf08fAAAA
@@ -1515,117 +1514,117 @@ IQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAA
 QFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFACIQAAQFD/
 D3QCZRhSvK8ZAAAAAElFTkSuQmCC
 "/>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Nice MATLAB! Now let's have a look at our newly generated Plotly plot.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice MATLAB! Now let's have a look at our newly generated Plotly plot.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [8]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/663'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [8]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/663'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[8]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/663/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Cool!
-        <strong>
-         fig2plotly.m
-        </strong>
-        preserves the subplot layout structure. It also converts the x-axis labels using the concise SI prefix μ = 10
-        <sup>
-         -6
-        </sup>
-        . You might notice that the colours for the traces generated using
-        <strong>
-         fig2plotly.m
-        </strong>
-        did not stay blue like the original output from MATLAB. This is because we did not specify the "strip" property of
-        <strong>
-         fig2plotly.m
-        </strong>
-        as we did in the first example. By default,
-        <strong>
-         fig2plotly.m
-        </strong>
-        strips the MATLAB color/style and uses Plotly's beautiful default color/style.
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[8]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/663/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="-br-example-3a-fig2plotly-m">
-        <br/>
-        Example 3A: fig2plotly.m
-       </h3>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Cool!
+       <strong>
+        fig2plotly.m
+       </strong>
+       preserves the subplot layout structure. It also converts the x-axis labels using the concise SI prefix μ = 10
+       <sup>
+        -6
+       </sup>
+       . You might notice that the colours for the traces generated using
+       <strong>
+        fig2plotly.m
+       </strong>
+       did not stay blue like the original output from MATLAB. This is because we did not specify the "strip" property of
+       <strong>
+        fig2plotly.m
+       </strong>
+       as we did in the first example. By default,
+       <strong>
+        fig2plotly.m
+       </strong>
+       strips the MATLAB color/style and uses Plotly's beautiful default color/style.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Now let's have a look at some other chart types in MATLAB and apply
-        <strong>
-         fig2plotly.m
-        </strong>
-        . Let's experiment with bar charts with a double y axis.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="-br-example-3a-fig2plotly-m">
+       <br/>
+       Example 3A: fig2plotly.m
+      </h3>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [9]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now let's have a look at some other chart types in MATLAB and apply
+       <strong>
+        fig2plotly.m
+       </strong>
+       . Let's experiment with bar charts with a double y axis.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [9]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>            <span class="n">FROM</span> <span class="n">MATLAB</span> <span class="n">PLOT</span> <span class="n">GALLERY</span>              <span class="o">%</span>
 <span class="o">%</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">mathworks</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">discovery</span><span class="o">/</span><span class="n">gallery</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span>
@@ -1656,17 +1655,17 @@ D3QCZRhSvK8ZAAAAAElFTkSuQmCC
 <span class="n">filename</span> <span class="o">=</span> <span class="s">'matlab_overview_4'</span><span class="p">;</span>
 <span class="n">resp</span> <span class="o">=</span> <span class="n">fig2plotly</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span><span class="s">'filename'</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="s">'strip'</span><span class="p">,</span><span class="n">false</span><span class="p">);</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_png output_subarea ">
-         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
 B3RJTUUH3ggYEwcIHsfgkgAAACJ0RVh0Q3JlYXRpb24gVGltZQAyNC1BdWctMjAxNCAxNTowNzow
 OKzZmL8AAAAkdEVYdFNvZnR3YXJlAE1BVExBQiwgVGhlIE1hdGh3b3JrcywgSW5jLrrEUs8AACAA
 SURBVHic7d1bdqM6twZQOCM9Kve/BVSbOA/U5ifcLGMuktacww8VRyFKQmE+L13avu8bAAAA4vm/
@@ -1903,301 +1902,301 @@ SiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAE
 AAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAISiAEAAAI6v8BS9m+XucQJP0AAAAASUVO
 RK5CYII=
 "/>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The above plot is the ouptut we receive from calling the
+       <strong>
+        plotyy.m
+       </strong>
+       function inherent in MATLAB. Now, Let's grab that url from the
+       <strong>
+        resp
+       </strong>
+       structure aray and have a look at our newly genereted plot using
+       <strong>
+        fig2plotly.m
+       </strong>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [10]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        The above plot is the ouptut we receive from calling the
-        <strong>
-         plotyy.m
-        </strong>
-        function inherent in MATLAB. Now, Let's grab that url from the
-        <strong>
-         resp
-        </strong>
-        structure aray and have a look at our newly genereted plot using
-        <strong>
-         fig2plotly.m
-        </strong>
-        .
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [10]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">resp</span><span class="o">.</span><span class="n">url</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans =
 
 https://plot.ly/~matlab_user_guide/664
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [11]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/664'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [11]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/664'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[11]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/664/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Sweet! Now we can use the Plotly web app to customize style an layout to our personal preference.
-        <br/>
-        <br/>
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[11]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/664/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Sweet! Now we can use the Plotly web app to customize style an layout to our personal preference.
+       <br/>
+       <br/>
+      </p>
      </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <font size="5">
-         Alternatively...
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <font size="5">
+        Alternatively...
+       </font>
+       we can use the Plotly declaritive syntax to edit the style and layout with
+       <strong>
+        plotly.m
+       </strong>
+       , one of the original API functions. To do this, we will need to use another
+       <strong>
+        <font color="red">
+         *NEW*
         </font>
-        we can use the Plotly declaritive syntax to edit the style and layout with
-        <strong>
-         plotly.m
-        </strong>
-        , one of the original API functions. To do this, we will need to use another
-        <strong>
-         <font color="red">
-          *NEW*
-         </font>
-        </strong>
-        function that simplifies everything:
-        <strong>
-         getplotlyfig.m
-        </strong>
-        .
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-       </p>
-      </div>
+       </strong>
+       function that simplifies everything:
+       <strong>
+        getplotlyfig.m
+       </strong>
+       .
+       <br/>
+       <br/>
+       <br/>
+       <br/>
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <h1 id="gpf">
-         getplotlyfig.m
-        </h1>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <h1 id="gpf">
+        getplotlyfig.m
+       </h1>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <hr/>
-       <center>
-        <h3>
-         Get data, style, and layout from the plots stored online
-        </h3>
-       </center>
-       <hr/>
-      </div>
-     </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        One of Plotly's secret powers is the ability to translate between MATLAB's structure/cell array syntax and JSON. This allows a smooth transition between the your figures in MATLAB and those stored in your Plotly account. In order to grab the data, style, and layout information from your plots living online, we've introduce a
-        <strong>
-         <font color="red">
-          *NEW*
-         </font>
-        </strong>
-        funtion into the API:
-        <strong>
-         getplotlyfig.m
-        </strong>
-        . In fact, we can go one step further:
-        <strong>
-         getploylyfig.m
-        </strong>
-        lets you grab the data, style and layout of
-        <em>
-         anyone's
-        </em>
-        Plotly plots (as long as they are made public) - not just your own! See a graph you like online? Grab the data, style and layout and make one for yourself.
-       </p>
-       <hr size="5px"/>
-       <p>
-        <strong>
-         [INPUT]:
-        </strong>
-       </p>
-       <p>
-        plotlyfigure = getplotlyfig(file_owner,file_id)
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [WHERE]:
-        </strong>
-       </p>
-       <p>
-        file_owner - user name associated with the plot [string].
-       </p>
-       <p>
-        file_id - number identifier associated with the plot [string]
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [OUTPUT]:
-        </strong>
-       </p>
-       <p>
-        plotlyfigure - results info of the plot [struct]
-plotlyfigure.[data,layout]
-       </p>
-       <hr size="5px"/>
-       <p>
-        If the provided input arguments are valid,
-        <strong>
-         getplotlyfig.m
-        </strong>
-        returns a
-        <strong>
-         figure
-        </strong>
-        structure with
-        <strong>
-         data
-        </strong>
-        and
-        <strong>
-         layout
-        </strong>
-        fields. The data field is a cell array containing the exact same data, and style information as is required for the
-        <strong>
-         plotly.m
-        </strong>
-        function input. Likewise, the
-        <strong>
-         layout
-        </strong>
-        structure array contains all the layout information in the same form as is required for the
-        <strong>
-         plotly.m
-        </strong>
-        function input.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="Example-3B:-getplotlyfig.m">
-        Example 3B: getplotlyfig.m
-        <a class="anchor-link" href="#Example-3B:-getplotlyfig.m">
-         ¶
-        </a>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <center>
+       <h3>
+        Get data, style, and layout from the plots stored online
        </h3>
-      </div>
+      </center>
+      <hr/>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       One of Plotly's secret powers is the ability to translate between MATLAB's structure/cell array syntax and JSON. This allows a smooth transition between the your figures in MATLAB and those stored in your Plotly account. In order to grab the data, style, and layout information from your plots living online, we've introduce a
+       <strong>
+        <font color="red">
+         *NEW*
+        </font>
+       </strong>
+       funtion into the API:
+       <strong>
+        getplotlyfig.m
+       </strong>
+       . In fact, we can go one step further:
+       <strong>
+        getploylyfig.m
+       </strong>
+       lets you grab the data, style and layout of
+       <em>
+        anyone's
+       </em>
+       Plotly plots (as long as they are made public) - not just your own! See a graph you like online? Grab the data, style and layout and make one for yourself.
+      </p>
+      <hr size="5px"/>
+      <p>
+       <strong>
+        [INPUT]:
+       </strong>
+      </p>
+      <p>
+       plotlyfigure = getplotlyfig(file_owner,file_id)
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [WHERE]:
+       </strong>
+      </p>
+      <p>
+       file_owner - user name associated with the plot [string].
+      </p>
+      <p>
+       file_id - number identifier associated with the plot [string]
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [OUTPUT]:
+       </strong>
+      </p>
+      <p>
+       plotlyfigure - results info of the plot [struct]
+plotlyfigure.[data,layout]
+      </p>
+      <hr size="5px"/>
+      <p>
+       If the provided input arguments are valid,
+       <strong>
+        getplotlyfig.m
+       </strong>
+       returns a
+       <strong>
+        figure
+       </strong>
+       structure with
+       <strong>
+        data
+       </strong>
+       and
+       <strong>
+        layout
+       </strong>
+       fields. The data field is a cell array containing the exact same data, and style information as is required for the
+       <strong>
+        plotly.m
+       </strong>
+       function input. Likewise, the
+       <strong>
+        layout
+       </strong>
+       structure array contains all the layout information in the same form as is required for the
+       <strong>
+        plotly.m
+       </strong>
+       function input.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="Example-3B:-getplotlyfig.m">
+       Example 3B: getplotlyfig.m
+       <a class="anchor-link" href="#Example-3B:-getplotlyfig.m">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now that we have a basic understanding of
+       <strong>
+        getplotlyfig.m
+       </strong>
+       , let's have a go at changing the bar and line colours from our previous example!
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [12]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Now that we have a basic understanding of
-        <strong>
-         getplotlyfig.m
-        </strong>
-        , let's have a go at changing the bar and line colours from our previous example!
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [12]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>       <span class="n">GET</span> <span class="n">PLOTLY</span> <span class="n">FIG</span><span class="err">!</span>       <span class="o">%</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
@@ -2261,212 +2260,212 @@ plotlyfigure.[data,layout]
 <span class="n">resp</span> <span class="o">=</span> <span class="n">plotly</span><span class="p">(</span><span class="n">plotlyfigure</span><span class="o">.</span><span class="n">data</span><span class="p">,</span><span class="n">args</span><span class="p">);</span>
 <span class="n">url</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">url</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>url =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>url =
 
 https://plot.ly/~matlab_user_guide/665
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [13]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/665'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [13]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/665'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[13]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/665/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Awesome! Note that we changed the names of the bar and line data so that when we scroll over the plot we get a nicely labeled interactive output. Give it a try!
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[13]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/665/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="Example-4:-getplotlyfig.m">
-        Example 4: getplotlyfig.m
-        <a class="anchor-link" href="#Example-4:-getplotlyfig.m">
-         ¶
-        </a>
-       </h3>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Awesome! Note that we changed the names of the bar and line data so that when we scroll over the plot we get a nicely labeled interactive output. Give it a try!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        As we mentioned above, not only does
-        <strong>
-         getplotlyfig.m
-        </strong>
-        help us edit the plots that we made using
-        <strong>
-         fig2plotly.m
-        </strong>
-        , it also allows us to grab the data, style, and layout information from any public Plotly plot (say that three time fast) regardless of the API used to generate them. That means we can grab plots generated in R or Python and throw them into MATLAB to analyze, restyle, and throw back online. It's all the same to Plotly! Let's have a look at how that works. First, check out this sweet plot made by a user named
-        <strong>
-         "ReadtheBox"
-        </strong>
-        .
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="Example-4:-getplotlyfig.m">
+       Example 4: getplotlyfig.m
+       <a class="anchor-link" href="#Example-4:-getplotlyfig.m">
+        ¶
+       </a>
+      </h3>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [14]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~ReadtheBox/35'</span><span class="p">)</span> 
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       As we mentioned above, not only does
+       <strong>
+        getplotlyfig.m
+       </strong>
+       help us edit the plots that we made using
+       <strong>
+        fig2plotly.m
+       </strong>
+       , it also allows us to grab the data, style, and layout information from any public Plotly plot (say that three time fast) regardless of the API used to generate them. That means we can grab plots generated in R or Python and throw them into MATLAB to analyze, restyle, and throw back online. It's all the same to Plotly! Let's have a look at how that works. First, check out this sweet plot made by a user named
+       <strong>
+        "ReadtheBox"
+       </strong>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [14]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~ReadtheBox/35'</span><span class="p">)</span> 
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[14]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ReadtheBox/35/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[14]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~ReadtheBox/35/750/550" width="750">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       So sweet! Let's use
+       <strong>
+        getplotlyfig.m
+       </strong>
+       to grab the data/style and layout from this plot.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [15]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        So sweet! Let's use
-        <strong>
-         getplotlyfig.m
-        </strong>
-        to grab the data/style and layout from this plot.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [15]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">plotlyfigure</span> <span class="o">=</span> <span class="n">getplotlyfig</span><span class="p">(</span><span class="s">'ReadtheBox'</span><span class="p">,</span><span class="s">'35'</span><span class="p">)</span> <span class="o">%</span><span class="k">grab</span> <span class="n">the</span> <span class="n">data</span> <span class="kn">from</span> <span class="nn">ReadtheBox</span> <span class="p">(</span><span class="n">awesome</span> <span class="n">Plotly</span> <span class="n">user</span><span class="err">!</span><span class="p">)</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>plotlyfigure = 
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>plotlyfigure = 
 
     layout: [1x1 struct]
       data: {1x9 cell}
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Nice! Now let's have some fun changing things up. Let's have a look at the data field.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [16]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Nice! Now let's have some fun changing things up. Let's have a look at the data field.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [16]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">plotlyfigure</span><span class="o">.</span><span class="n">data</span><span class="p">{</span><span class="mi">1</span><span class="p">}</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans = 
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans = 
 
     textfont: [1x1 struct]
         name: 'Runs'
@@ -2479,58 +2478,58 @@ https://plot.ly/~matlab_user_guide/665
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        The data field is a {1x9} cell array where each element of the cell array corresponds to a different baseball statistic. The first data cell array element,
-        <strong>
-         plotlyfigure.data{1}
-        </strong>
-        , corresponds to the
-        <strong>
-         "Runs"
-        </strong>
-        data for each player.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       The data field is a {1x9} cell array where each element of the cell array corresponds to a different baseball statistic. The first data cell array element,
+       <strong>
+        plotlyfigure.data{1}
+       </strong>
+       , corresponds to the
+       <strong>
+        "Runs"
+       </strong>
+       data for each player.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Now, lets say we only wanted to look at
-        <strong>
-         "Runs"
-        </strong>
-        and
-        <strong>
-         "Hits"
-        </strong>
-        . We can do that easily by grabbing the first two elements of the data cell array.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now, lets say we only wanted to look at
+       <strong>
+        "Runs"
+       </strong>
+       and
+       <strong>
+        "Hits"
+       </strong>
+       . We can do that easily by grabbing the first two elements of the data cell array.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [17]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [17]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span> 
 <span class="o">%</span>         <span class="n">DATA</span><span class="o">/</span><span class="n">STYLE</span>          <span class="o">%</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
@@ -2553,97 +2552,97 @@ https://plot.ly/~matlab_user_guide/665
 <span class="n">resp</span> <span class="o">=</span> <span class="n">plotly</span><span class="p">(</span><span class="n">traces</span><span class="p">,</span><span class="n">args</span><span class="p">);</span> <span class="o">%</span> <span class="o">&lt;---</span> <span class="n">USE</span> <span class="n">PLOTLY</span> <span class="n">TO</span> <span class="n">THROW</span> <span class="n">OUR</span> <span class="n">NEW</span> <span class="n">PLOT</span> <span class="n">ONLINE</span>
 <span class="n">resp</span><span class="o">.</span><span class="n">url</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans =
 
 https://plot.ly/~matlab_user_guide/666
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Let's take a look:
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's take a look:
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [18]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/666'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [18]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/666'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[18]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/666/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Awesome - Go Ellsbury!
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[18]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/666/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Now let's change some layout settings. How about we change the barmode from 'stack' to 'group'.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Awesome - Go Ellsbury!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [19]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now let's change some layout settings. How about we change the barmode from 'stack' to 'group'.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [19]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span> 
 <span class="o">%</span>         <span class="n">DATA</span><span class="o">/</span><span class="n">STYLE</span>          <span class="o">%</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
@@ -2675,227 +2674,227 @@ https://plot.ly/~matlab_user_guide/666
 <span class="n">resp</span> <span class="o">=</span> <span class="n">plotly</span><span class="p">(</span><span class="n">traces</span><span class="p">,</span><span class="n">args</span><span class="p">);</span> 
 <span class="n">resp</span><span class="o">.</span><span class="n">url</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans =
 
 https://plot.ly/~matlab_user_guide/668
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [20]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/668'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [20]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/668'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[20]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/668/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Cool!
-        <br/>
-        <br/>
-       </p>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[20]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/668/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Cool!
+       <br/>
+       <br/>
+      </p>
      </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <font size="5">
-         But...
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <font size="5">
+        But...
+       </font>
+       what happens if we want to put our graph in a report or thesis? So far all we have seen is how to share/embed our plots online. What we need now is to save our Plotly figures as images. For that we use the
+       <strong>
+        <font color="red">
+         *NEW*
         </font>
-        what happens if we want to put our graph in a report or thesis? So far all we have seen is how to share/embed our plots online. What we need now is to save our Plotly figures as images. For that we use the
-        <strong>
-         <font color="red">
-          *NEW*
-         </font>
-        </strong>
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        function...
-        <br/>
-        <br/>
-        <br/>
-       </p>
-      </div>
+       </strong>
+       <strong>
+        saveplotlyfig.m
+       </strong>
+       function...
+       <br/>
+       <br/>
+       <br/>
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-       </p>
-       <center>
-        <h1 id="spf">
-         saveplotlyfig.m
-        </h1>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+      </p>
+      <center>
+       <h1 id="spf">
+        saveplotlyfig.m
+       </h1>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <hr/>
-       <center>
-        <h3>
-         Save your MATLAB figure as an image using Plotly
-        </h3>
-       </center>
-       <hr/>
-      </div>
-     </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        allows you to convert your MATLAB figures into static images (.png, .svg, .pdf, .jpeg) using Plotly.
-       </p>
-       <hr size="5px"/>
-       <p>
-        <strong>
-         [INPUT]:
-        </strong>
-       </p>
-       <p>
-        saveplotlyfig(data, filename, format {otional})
-       </p>
-       <p>
-        saveplotlyfig(plotlyfigure, filename, format {optional})
-       </p>
-       <p>
-        <strong>
-         NOTE:
-        </strong>
-        if format is unspecified, saveplotlyfig will use the image format given by the  extension of filename. If filename does not have an explicit extension (ex: filename.pdf), the default format of PNG will be used for the conversion.
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [WHERE]:
-        </strong>
-       </p>
-       <p>
-        data - data/style of plot [cell array]
-       </p>
-       <p>
-        plotlyfigure.data - data/style of plot [cell array]
-       </p>
-       <p>
-        plotlyfigure.layout - layout of plot [struct]
-       </p>
-       <p>
-        filename - name of image to be saved [string]
-       </p>
-       <p>
-        <br/>
-       </p>
-       <p>
-        <strong>
-         [OUTPUT]:
-        </strong>
-       </p>
-       <p>
-        Image 'filename' of the specified format (PNG, PDF, JPEG, or SVG) saved to your working directory.
-       </p>
-       <hr size="5px"/>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3 id="EXAMPLE-5:-saveplotlyfig.m">
-        EXAMPLE 5: saveplotlyfig.m
-        <a class="anchor-link" href="#EXAMPLE-5:-saveplotlyfig.m">
-         ¶
-        </a>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <hr/>
+      <center>
+       <h3>
+        Save your MATLAB figure as an image using Plotly
        </h3>
-      </div>
+      </center>
+      <hr/>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <strong>
+        saveplotlyfig.m
+       </strong>
+       allows you to convert your MATLAB figures into static images (.png, .svg, .pdf, .jpeg) using Plotly.
+      </p>
+      <hr size="5px"/>
+      <p>
+       <strong>
+        [INPUT]:
+       </strong>
+      </p>
+      <p>
+       saveplotlyfig(data, filename, format {otional})
+      </p>
+      <p>
+       saveplotlyfig(plotlyfigure, filename, format {optional})
+      </p>
+      <p>
+       <strong>
+        NOTE:
+       </strong>
+       if format is unspecified, saveplotlyfig will use the image format given by the  extension of filename. If filename does not have an explicit extension (ex: filename.pdf), the default format of PNG will be used for the conversion.
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [WHERE]:
+       </strong>
+      </p>
+      <p>
+       data - data/style of plot [cell array]
+      </p>
+      <p>
+       plotlyfigure.data - data/style of plot [cell array]
+      </p>
+      <p>
+       plotlyfigure.layout - layout of plot [struct]
+      </p>
+      <p>
+       filename - name of image to be saved [string]
+      </p>
+      <p>
+       <br/>
+      </p>
+      <p>
+       <strong>
+        [OUTPUT]:
+       </strong>
+      </p>
+      <p>
+       Image 'filename' of the specified format (PNG, PDF, JPEG, or SVG) saved to your working directory.
+      </p>
+      <hr size="5px"/>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3 id="EXAMPLE-5:-saveplotlyfig.m">
+       EXAMPLE 5: saveplotlyfig.m
+       <a class="anchor-link" href="#EXAMPLE-5:-saveplotlyfig.m">
+        ¶
+       </a>
+      </h3>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Let's have a look at
+       <strong>
+        saveplotlyfig.m
+       </strong>
+       to see how it works. Check out this next plot that was featured on the MATLAB plot gallery.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [21]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Let's have a look at
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        to see how it works. Check out this next plot that was featured on the MATLAB plot gallery.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [21]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>            <span class="n">FROM</span> <span class="n">MATLAB</span> <span class="n">PLOT</span> <span class="n">GALLERY</span>              <span class="o">%</span>
 <span class="o">%</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">mathworks</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">discovery</span><span class="o">/</span><span class="n">gallery</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span>
@@ -2928,17 +2927,17 @@ https://plot.ly/~matlab_user_guide/668
 <span class="n">filename</span> <span class="o">=</span> <span class="s">'matlab_overview_8'</span><span class="p">;</span> 
 <span class="n">resp</span> <span class="o">=</span> <span class="n">fig2plotly</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span><span class="s">'filename'</span><span class="p">,</span><span class="n">filename</span><span class="p">,</span><span class="s">'strip'</span><span class="p">,</span><span class="n">false</span><span class="p">);</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_png output_subarea ">
-         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_png output_subarea ">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLAAAAOECAIAAAA+D1+tAAAACXBIWXMAABcSAAAXEgFnn9JSAAAA
 B3RJTUUH3ggYEwgN6TUI0gAAACJ0RVh0Q3JlYXRpb24gVGltZQAyNC1BdWctMjAxNCAxNTowODox
 M3pzYCAAAAAkdEVYdFNvZnR3YXJlAE1BVExBQiwgVGhlIE1hdGh3b3JrcywgSW5jLrrEUs8AACAA
 SURBVHic7N3tluOoDoVh6DX3f8uaH4AQIDBOnK/y+6xZfVIpx3FSNXOyWyBFEQkAAAAAgPv59+kL
@@ -3919,107 +3918,107 @@ PgqCEAAAAAAA4KMgCAEAAAAAAD4KghAAAAAAAOCjIAgBAAAAAAA+CoIQAAAAAADgoyAIAQAAAAAA
 PgqCEAAAAAAA4KMgCAEAAAAAAD4KghAAAAAAAOCjIAgBAAAAAAA+CoIQAAAAAADgoyAIAQAAAAAA
 Psp/TSGB9FDMd/YAAAAASUVORK5CYII=
 "/>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [22]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [22]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">resp</span><span class="o">.</span><span class="n">url</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>ans =
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>ans =
 
 https://plot.ly/~matlab_user_guide/670
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Good job MATLAB - let's look at the Plotly graph we created!
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Good job MATLAB - let's look at the Plotly graph we created!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [23]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/670'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [23]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/670'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[23]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/670/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[23]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/670/750/550" width="750">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       So awesome! Now let's save this plot as a PNG image using
+       <strong>
+        saveplotlyfig.m
+       </strong>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [24]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        So awesome! Now let's save this plot as a PNG image using
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        .
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [24]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
 <span class="o">%</span>       <span class="n">GET</span> <span class="n">PLOTLY</span> <span class="n">FIG</span><span class="err">!</span>       <span class="o">%</span>
 <span class="o">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
@@ -4034,303 +4033,300 @@ https://plot.ly/~matlab_user_guide/670
 
 <span class="n">saveplotlyfig</span><span class="p">(</span><span class="n">plotlyfigure</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        Boom!
-        <strong>
-         morse.png
-        </strong>
-        has been automatically saved to our working directory. Let's have a look.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       Boom!
+       <strong>
+        morse.png
+       </strong>
+       has been automatically saved to our working directory. Let's have a look.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <img ;="" alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/morse.png" style="width: 700px; height: 550px; margin-left: auto;margin-right: auto"/>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/morse.png" style="width: 700px; height: 550px; margin-left: auto;margin-right: auto"/>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Awesome! Do you notice how the above plot is no longer interactive? That's because it is a static PNG image, ready to be placed in your offline documents.
-       </p>
-       <p>
-        Plotly graphics are rendered as high-quality vector graphics so they embed really well in presentations and reports.
-       </p>
-       <p>
-        Take a look for yourself. Here are the static image versions of the following plot.
-       </p>
-       <ul>
-        <li>
-         <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.pdf">
-          Click to download the PDF version
-         </a>
-        </li>
-        <li>
-         <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.png">
-          Click to view the PNG version
-         </a>
-        </li>
-        <li>
-         <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.jpeg">
-          Click to view the JPEG version
-         </a>
-        </li>
-        <li>
-         <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.svg">
-          Click to view the SVG version
-         </a>
-        </li>
-       </ul>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Awesome! Do you notice how the above plot is no longer interactive? That's because it is a static PNG image, ready to be placed in your offline documents.
+      </p>
+      <p>
+       Plotly graphics are rendered as high-quality vector graphics so they embed really well in presentations and reports.
+      </p>
+      <p>
+       Take a look for yourself. Here are the static image versions of the following plot.
+      </p>
+      <ul>
+       <li>
+        <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.pdf">
+         Click to download the PDF version
+        </a>
+       </li>
+       <li>
+        <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.png">
+         Click to view the PNG version
+        </a>
+       </li>
+       <li>
+        <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.jpeg">
+         Click to view the JPEG version
+        </a>
+       </li>
+       <li>
+        <a href="/static/api_docs/image/matlab_user_guide/PlotlyImageTest.svg">
+         Click to view the SVG version
+        </a>
+       </li>
+      </ul>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [25]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/889'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [25]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~matlab_user_guide/889'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[25]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/889/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h3>
-        Example 6: saveplotlyfig.m
-       </h3>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[25]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~matlab_user_guide/889/750/550" width="750">
+        </iframe>
+       </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        As a final example, let's grab a public plot from another Plotly user. This one is an awesome line plot from our very own
-        <strong>
-         jackp
-        </strong>
-        .
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h3>
+       Example 6: saveplotlyfig.m
+      </h3>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [26]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~jackp/671'</span><span class="p">)</span>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       As a final example, let's grab a public plot from another Plotly user. This one is an awesome line plot from our very own
+       <strong>
+        jackp
+       </strong>
+       .
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [26]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="n">show_plot</span><span class="p">(</span><span class="s">'https://plot.ly/~jackp/671'</span><span class="p">)</span>
 </pre>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt output_prompt">
-         Out[26]:
-        </div>
-        <div class="output_html rendered_html output_subarea output_pyout">
-         <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~jackp/671/750/550" width="750">
-         </iframe>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt output_prompt">
+        Out[26]:
+       </div>
+       <div class="output_html rendered_html output_subarea output_pyout">
+        <iframe frameborder="0" height="550" id="igraph" scrolling="no" seamless="seamless" src="https://plot.ly/~jackp/671/750/550" width="750">
+        </iframe>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       First grab the data/style and layout.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
      <div class="prompt input_prompt">
+      In [27]:
      </div>
      <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        First grab the data/style and layout.
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [27]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">plotlyfig</span> <span class="o">=</span> <span class="n">getplotlyfig</span><span class="p">(</span><span class="s">'jackp'</span><span class="p">,</span><span class="s">'671'</span><span class="p">)</span>
 </pre>
-        </div>
        </div>
       </div>
      </div>
-     <div class="output_wrapper">
-      <div class="output">
-       <div class="output_area">
-        <div class="prompt">
-        </div>
-        <div class="output_text output_subarea ">
-         <pre>plotlyfig = 
+    </div>
+    <div class="output_wrapper">
+     <div class="output">
+      <div class="output_area">
+       <div class="prompt">
+       </div>
+       <div class="output_text output_subarea ">
+        <pre>plotlyfig = 
 
     layout: [1x1 struct]
       data: {1x11 cell}
 
 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Now feed the data/style and layout information into
-        <strong>
-         saveplotlyfig.m
-        </strong>
-        .
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Now feed the data/style and layout information into
+       <strong>
+        saveplotlyfig.m
+       </strong>
+       .
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing code_cell rendered">
-     <div class="input">
-      <div class="prompt input_prompt">
-       In [28]:
-      </div>
-      <div class="inner_cell">
-       <div class="input_area">
-        <div class="highlight">
-         <pre><span class="o">%%</span><span class="k">matlab</span>
+   </div>
+   <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+     <div class="prompt input_prompt">
+      In [28]:
+     </div>
+     <div class="inner_cell">
+      <div class="input_area">
+       <div class="highlight">
+        <pre><span class="o">%%</span><span class="k">matlab</span>
 <span class="n">filename</span> <span class="o">=</span> <span class="s">'tax.png'</span><span class="p">;</span> 
 <span class="n">saveplotlyfig</span><span class="p">(</span><span class="n">plotlyfig</span><span class="p">,</span><span class="n">filename</span><span class="p">);</span> 
 </pre>
-        </div>
        </div>
       </div>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        Cool! Let's have a look at the image.
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       Cool! Let's have a look at the image.
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <center>
-        <img ;="" alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/tax.png" style="width: 700px; height: 550px; margin-left: auto;margin-right: auto"/>
-       </center>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <center>
+       <img alt="" src="https://raw.githubusercontent.com/plotly/MATLAB-User-Guide/master/images/tax.png" style="width: 700px; height: 550px; margin-left: auto;margin-right: auto"/>
+      </center>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        <br/>
-        All we have to do now is throw it into our economics report!
-       </p>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       <br/>
+       All we have to do now is throw it into our economics report!
+      </p>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <h1 id="CONTACT">
-        <span id="contacts">
-         CONTACT
-        </span>
-        <a class="anchor-link" href="#CONTACT">
-         ¶
-        </a>
-       </h1>
-      </div>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <h1 id="CONTACT">
+       <span id="contacts">
+        CONTACT
+       </span>
+       <a class="anchor-link" href="#CONTACT">
+        ¶
+       </a>
+      </h1>
      </div>
     </div>
-    <div class="cell border-box-sizing text_cell rendered">
-     <div class="prompt input_prompt">
-     </div>
-     <div class="inner_cell">
-      <div class="text_cell_render border-box-sizing rendered_html">
-       <p>
-        Want to help improve this notebook? Please send us your comments/questions! Feedback concerning this notebook can be directed to
-        <font color="#1d3b84">
-         <strong>
-          chuck@plot.ly
-         </strong>
-        </font>
-       </p>
+   </div>
+   <div class="cell border-box-sizing text_cell rendered">
+    <div class="prompt input_prompt">
+    </div>
+    <div class="inner_cell">
+     <div class="text_cell_render border-box-sizing rendered_html">
+      <p>
+       Want to help improve this notebook? Please send us your comments/questions! Feedback concerning this notebook can be directed to
        <font color="#1d3b84">
+        <strong>
+         chuck@plot.ly
+        </strong>
        </font>
-      </div>
+      </p>
       <font color="#1d3b84">
       </font>
      </div>
@@ -4338,30 +4334,31 @@ https://plot.ly/~matlab_user_guide/670
      </font>
     </div>
     <font color="#1d3b84">
-     
-     <div class="cell border-box-sizing text_cell rendered">
-      <div class="prompt input_prompt">
-      </div>
-      <div class="inner_cell">
-       <div class="text_cell_render border-box-sizing rendered_html">
-        <center>
-         <sup>
-          [
-          <a class="nounderline" href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">
-           STYLE INSPIRED BY CAM DAVIDSON'S NB'S - THANK YOU
-          </a>
-          ]
-         </sup>
-        </center>
-       </div>
-      </div>
-     </div>
     </font>
    </div>
    <font color="#1d3b84">
+    <div class="cell border-box-sizing text_cell rendered">
+     <div class="prompt input_prompt">
+     </div>
+     <div class="inner_cell">
+      <div class="text_cell_render border-box-sizing rendered_html">
+       <center>
+        <sup>
+         [
+         <a class="nounderline" href="http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/">
+          STYLE INSPIRED BY CAM DAVIDSON'S NB'S - THANK YOU
+         </a>
+         ]
+        </sup>
+       </center>
+      </div>
+     </div>
+    </div>
    </font>
   </div>
   <font color="#1d3b84">
   </font>
- 
+ </div>
+ <font color="#1d3b84">
+ </font>
 </body>
