@@ -9,7 +9,8 @@ import os
 #
 # -------------------------------------------------------------------------------
 
-NAME="make_sitemaps"  # name of this script
+NAME = "make_sitemaps"  # name of this script
+tab = "    "  # tab in space
 
 # Get translate.json, to translate HTML file names to branch names
 def get_translate():
@@ -22,49 +23,49 @@ def get_chapters(translate):
     return translate.values()
 
 # Get sitemaps items
-# N.B. To be imported in 
+# N.B. To be imported in shelly/shelly/sitemaps.py
 def get_items(chapters):
     locations = []
     lmfiles = []
     for chapter in chapters:
         locations += ["'/matlab/{}/'".format(chapter)]
-        lmfiles += [("os.path.join("
-            "settings.TOP_DIR,"
-            "'shelly',"
-            "'templates',"
-            "'api_docs',"
-            "'includes',"
-            "'user_guide',"
-            "'matlab',"
-            "'{}',"
+        lmfiles += [("os.path.join(\n{tab}{tab}{tab}{tab}"
+            "settings.TOP_DIR, "
+            "'shelly',\n{tab}{tab}{tab}{tab}"
+            "'templates', "
+            "'api_docs', "
+            "'includes',\n{tab}{tab}{tab}{tab}"
+            "'user_guide',\n{tab}{tab}{tab}{tab}"
+            "'matlab',\n{tab}{tab}{tab}{tab}"
+            "'{chapter}',\n{tab}{tab}{tab}{tab}"
             "'body.html')"
-        ).format(chapter)]
+        ).format(chapter=chapter,tab=tab)]
     return locations, lmfiles
 
 # Generate python_sitemaps.py file
 # See streambed/api_docs/ for more info
 def get_sitemaps_py(locations, lmfiles):
     sitemaps_py = (
-        "from django.conf import settings\n"
         "import os\n\n"
+        "from django.conf import settings\n\n\n"
         "def items():\n"
         "    items = [\n"
     )
     for location, lmfile in zip(locations,lmfiles):
         sitemaps_py += (
-        "        dict(\n"
-        "            location={location},\n"
-        "            lmfile={lmfile},\n"
-        "            priority=0.5\n"
-        "        )"
-        ).format(location=location,lmfile=lmfile)
+        "{tab}{tab}dict(\n"
+        "{tab}{tab}{tab}location={location},\n"
+        "{tab}{tab}{tab}lmfile={lmfile},\n"
+        "{tab}{tab}{tab}priority=0.5\n"
+        "{tab}{tab})"
+        ).format(location=location,lmfile=lmfile,tab=tab)
         if location != locations[-1]:
             sitemaps_py += ",\n"
     sitemaps_py += (
-        "\n    ]"
-        "\n    return items"
+        "\n{tab}]"
+        "\n{tab}return items"
         "\n"
-    )
+    ).format(tab=tab)
     return sitemaps_py
 
 # Replace matlab_sitemaps.py
